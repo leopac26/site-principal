@@ -1,0 +1,244 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="corinhos.css">
+  <link rel="stylesheet" href="../meusite.css">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>hinos da Harpa Cristã</title>
+</head>
+  <script src="../hinos-da-harpa/cifra.js"></script>
+
+  <style>
+
+.titulo{
+  border: 1px solid black;
+  background: blue;
+  color: white;
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  top: 50px;
+  font-size: 40px;
+  
+}
+
+
+#principal-corinhos {
+  overflow-y: auto;
+  position: fixed; /* Fixar a barra de rolagem na tela */
+  top: 90px; /* Ajustar para ficar logo abaixo do título azul */
+  left: 20px; /* Manter o alinhamento à esquerda */
+  height: calc(100vh - 130px); /* Calcular a altura como o total da tela menos o espaço ocupado pelo título */
+  width: 98.5%;
+  list-style: none;
+  text-transform: capitalize;
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700px;
+}
+
+
+
+
+
+
+#principal li::first-letter {color: red;}
+
+#principal li a:link{color: rgb(97, 0, 252);}
+
+#principal li a:visited{color: rgb(185, 34, 255);}
+
+#principal li a:hover{color: rgb(226, 141, 43);
+background: rgb(228, 221, 221);}
+
+ul.ordem-principal{list-style: none;
+margin: auto;}
+
+.menu-principal {
+    position: fixed;
+    width: 100%;
+background:blue;
+margin-top: 50px;
+font-size: 20px;}
+
+.titulo-menu{position: fixed;}
+
+
+
+ul.ordem-principal li {
+    background-color: #d5e7e9;
+    display: inline-block;
+    align-items: center;
+    align-content: center;
+    padding: 5px;
+    text-decoration: none;
+    transition-duration: 0.5s;
+    border: 1px solid black;
+    margin:5px;
+    border-radius: 10%;
+    
+
+
+}
+
+ul.ordem-principal li a {
+    text-decoration: none;
+    color: rgb(24, 9, 9);
+    text-transform: uppercase;
+    text-align: center;
+    
+}
+
+ul.ordem-principal li ul {
+    visibility: hidden;
+    opacity: 0;
+    min-width: 5rem;
+    position: fixed;
+    transition: all 0.5s ease;
+    margin: 0;
+    display: none;
+    box-shadow: 0px 8px 16px 0px rgba(92, 1, 240, 0.315);
+}
+
+
+ul.ordem-principal li ul li {
+    clear: both;
+    width: 100%;
+    padding: 0 ;
+    margin-top: 3px;
+    width: 100px;
+    display: block;
+    border: none;
+}
+
+ul.ordem-principal li:hover,
+ul.ordem-principal li:focus-within {
+    background-color: rgb(252, 252, 252);
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+
+
+a:hover {
+    color: rgb(231, 214, 214);
+}
+
+/*controla a exibiçao do dropdown*/
+
+ul.ordem-principal li:hover>ul,
+ul.ordem-principal li:focus-within>ul,
+ul.ordem-principal li ul:hover,
+ul.ordem-principal li ul:focus {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+}
+
+h2{
+  border: 1px solid rgb(78, 79, 93);
+  background:green;
+  width: 120px;
+  box-shadow: 5px 5px 30px greenyellow;
+  border-radius: 4%;
+  text-align: center;
+  margin-left: 5px;
+  font-size: 16px;
+  color: white;
+}
+
+
+
+
+@media(max-width:670px){
+ .menu-principal{
+  font-size:12px;
+  top: -18px;
+  width: 100%;
+  
+}
+ul.ordem-principal{
+  padding: 0px;
+  margin-left: -110px;
+}
+#principal {
+  font-size:16px;
+}
+.titulo{
+    font-size: 20px;
+}
+
+.titulo-menu{
+  width: 100%;
+  top: 0px;
+}
+
+
+#principal-corinhos{
+  
+  width: 100%;
+}
+
+.menu-tabela{
+  width: 100%;
+}
+
+}
+
+  </style>
+
+
+<body>
+  
+
+   <h1 class="titulo-menu">Igreja Shekinah Ministério kadosh  </h1>
+
+<table class="menu-principal">
+<tr class="menu-tabela">
+<td><a href="../corinhos/corinhos.html"> corinhos</a></td>
+<td><a href="">louvores</a></td>
+<td><a href="../genesis/index.html">biblia sagrada </a></td>
+<td><a href="../teclado virtual/teclado.html">Teclado Virtual </a></td>
+<td><a href="../hinos-da-harpa/index.html">hinos</a></td>
+<td><a href="../quiz-Biblico/quiz.html">quiz </a></td>
+<td><a href="">Playback </a></td>
+<td><a href="../videos-youtube/videosyoutube.html">videos</a></td>
+</tr>
+
+</table>
+
+<ul id="principal-corinhos">
+
+        <li><a href="alegria-esta-no-coraçao.html">A alegria esta no coração</a></li>
+        <li><a href="ao-unico.html">Ao único</a> </li>
+        <li><a href="Deus-forte.html">Deus forte</a> </li>
+        <li><a href="alegria-esta-no-coraçao.html">A alegria esta no coração</a></li>
+        <li><a href="corinho-de-fogo.html">18 corinhos de fogo</a></li>
+        <li><a href="bom-estarmos-aqui.html">Bom estarmos aqui</a></li>
+        <li><a href="em-espirito-em-verdade.html">em espirito em verdade</a></li>
+        <li><a href="nao-ha-Deus-maior.html">não ha Deus maior</a></li>
+        <li><a href="poder-do-espirito.html">poder do espirito</a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+    </ul>
+  
+  
+  
+</body>
+</html>
+
+
+

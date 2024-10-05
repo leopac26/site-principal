@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="cifra.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hino 01 Chuvas de Graça</title>
+  <style>
+    *{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+
+.titulo{
+text-align: center;    
+background: blue;
+color: white;
+position: fixed;
+width: 100%;
+height: 38px;
+top: -12px;
+padding: 5px;
+font-size: 25pt;
+border: 1px solid rgb(3, 212, 20);
+z-index: 1;
+text-align: center;
+margin-bottom: 10px;
+font-size: 24px;
+
+}
+
+
+
+ul.ordem-principal{
+    position: fixed;
+    width: 100%;
+    background:blue;
+    justify-content: center;
+    top: 30px;
+    font-size: 16px;
+    height: 30px;
+list-style: none;
+justify-content: center;
+align-items: center;
+text-align: center;
+z-index: 1;
+
+}
+
+ul.ordem-principal li {
+background-color: #d5e7e9;
+display: inline-block;
+padding: 2px;
+text-decoration: none;
+transition-duration: 0.5s;
+border: 1px solid black;
+border-radius: 10%;}
+
+ul.ordem-principal li a {
+text-align: center;
+text-decoration: none;
+color: rgb(24, 9, 9);
+text-transform: uppercase;
+text-align: center;
+
+}
+
+ul.ordem-principal li ul {
+    visibility: hidden;
+    opacity: 0;
+    min-width: 5rem;
+    position: fixed;
+    transition: all 0.5s ease;
+    margin: 0;
+    display: none;
+    box-shadow: 0px 8px 16px 0px rgba(92, 1, 240, 0.315);
+
+}
+
+
+ul.ordem-principal li ul li {
+clear: both;
+width: 100%;
+padding: 0px ;
+margin-top: 3px;
+width: 100px;
+display: block;
+border: none;
+}
+
+ul.ordem-principal li:hover,
+ul.ordem-principal li:focus-within {
+background-color: rgb(252, 252, 252);
+cursor: pointer;
+font-weight: bold;
+transition: 0.3s;
+}
+
+/*controla a exibiçao do dropdown*/
+
+ul.ordem-principal li:hover>ul,
+ul.ordem-principal li:focus-within>ul,
+ul.ordem-principal li ul:hover,
+ul.ordem-principal li ul:focus {
+visibility: visible;
+opacity: 1;
+display: block;
+}
+
+#controls {
+position: fixed;
+width: 70px;
+height: 300px;
+vertical-align: middle;
+background:rgb(153, 153, 168);
+border: 0px solid black;
+}
+
+
+.botao{
+
+}
+
+button{
+padding:1px;
+margin: 15px 0px 0px 0px;
+font-size: 1rem;
+border: 1px solid black;
+border-radius: 10%;
+width: 70px;
+height: 40px;
+font-weight: bold;
+display: block;}
+
+
+.snippet-ytb-lazy {
+position: absolute;
+width: 350px;
+height: 280px;
+background-color: black;
+top: 100px;
+left:800px;
+color: white;
+z-index: 0;
+}
+
+
+.snippet-ytb-lazy .player{display: flex;
+align-items: center;
+justify-content: center;
+cursor: pointer;}
+
+.snippet-ytb-lazy .player img{
+    border-radius: 50%;
+}
+
+
+.snippet-ytb-lazy .player, .snippet-ytb-lazy iframe{position: relative;
+width: 350px;
+height:280px;
+background-color: inherit;
+}
+
+
+
+.row1{
+    margin: 800px auto;
+    border: 1px solid black;}
+    
+    
+    
+    
+.container{
+    overflow: scroll;
+    border: 2px solid black;
+}
+
+
+
+#resultado{
+
+margin: 100px 70px;
+overflow: scroll;
+    border: 2px solid black;
+}
+
+
+
+
+
+
+#resultado .hino{
+    font-size: 40px;
+    
+    
+            }
+
+
+ #resultado pre{
+    font-size: 20px;
+
+   
+ }
+
+
+
+#resultado pre b{
+    color: blue;
+    font-size: 20px;    
+}
+
+@media(max-width:680px){
+    .titulo{ 
+    font-size:18pt;}
+
+    ul.ordem-principal li a{
+        font-size: 13px;
+    }
+
+
+#controls{
+    display: flex;
+    width: 100%;
+    height: 25px;
+    margin: -40px auto 0px auto;
+
+}
+
+button{
+    margin: 0px 2px auto 2px;
+    height: 25px;
+    
+}
+
+#resultado{
+   margin: 100px 0px ;
+   width: 80%;
+}
+#resultado  pre{
+    font-size: 13px;
+    width: 100%;
+}
+
+.snippet-ytb-lazy{
+    display: none;
+}
+
+.snippet-ytb-lazy .player{
+    display: none;
+
+}
+
+.snippet-ytb-lazy .player img{
+    display: none;
+}
+.snippet-ytb-lazy .player, .snippet-ytb-lazy iframe{
+    display: none;
+}
+}
+#scroll-container {
+    width: 400px;
+    height: 500px;
+    overflow: hidden;
+    
+    position: relative;
+    margin-bottom: 20px;
+}
+
+#scroll-text {
+    position: absolute;
+    white-space: nowrap;
+    white-space: normal;}
+
+    #speed-control{width: 60px;}
+
+
+    body {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        height: 100vh;
+      }
+  
+      
+  
+      .ordem-principal {
+        display: flex;
+        justify-content: center;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        background-color: #f0f0f0;
+        width: 100%;
+      }
+  
+      .ordem-principal li {
+        margin: 0 10px;
+      }
+  
+      .ordem-principal a {
+        text-decoration: none;
+        color: #333;
+        padding: 3px;
+        display: block;
+        background-color: #007BFF;
+        color: white;
+        border-radius: 5px;
+      }
+  
+      .ordem-principal a:hover {
+        background-color: #0056b3;
+      }
+  
+      #controls {
+        margin-top: 80px;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        background-color: #f0f0f0;
+        border-right: 1px solid #ccc;
+      }
+  
+      .control-button {
+        margin-bottom: 5px;
+        padding: 10px;
+        cursor: pointer;
+        border: 1px solid #ccc;
+        background-color: #ccc;
+        color: #333;
+        text-align: center;
+      }
+  
+      #scroll-container {
+        margin: 10px 0px 0px 100px;
+        padding: 10px;
+        height: auto;
+        width: 91%;
+        overflow-y: auto;
+        white-space: pre-wrap;
+        font-size: 16px;
+      }
+  
+      pre {
+        margin: 50px 10px 10px 5px;
+      }
+  
+      .video-container {
+        position: fixed;
+        top: 70px;
+        right: 20px;
+        z-index: 1000;
+        width: 100%;
+        max-width: 560px;
+        height: 315px;
+      }
+  
+      .video-container iframe {
+        width: 100%;
+        height: 100%;
+      }
+  
+      @media (max-width: 680px) {
+        .titulo {
+          font-size: 20px;
+          text-align: center;
+        }
+  
+        .ordem-principal {
+          flex-direction: row;
+          justify-content: space-around;
+          padding: 2px 0;
+        }
+  
+        .ordem-principal li {
+          width: auto;
+          text-align: center;
+        }
+  
+        .ordem-principal ul {
+          display: none;
+        }
+  
+        #controls {
+          flex-direction: row;
+          flex-wrap: wrap;
+          width: 100%;
+          height: auto;
+          margin-top: 40px;
+          border-right: none;
+          border-bottom: none;
+          position: static;
+          justify-content: space-around;
+          padding: 10px 0;
+        }
+  
+        .control-button {
+          flex: 1 1 30%;
+          padding: 10px 5px;
+          font-size: 14px;
+          text-align: center;
+          margin: 5px;
+        }
+  
+        #scroll-container {
+          margin-left: 0;
+          height: calc(100vh - 220px);
+          padding-top: 10px;
+        }
+  
+        .video-container {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          margin-top: 10px;
+          position: static;
+          max-width: 100%;
+        }
+  
+        .video-container iframe {
+          width: 100%;
+          max-width: 100%;
+          height: auto;
+        }
+      }
+  </style>
+</head>
+<body>
+  <div class="video-container">
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/FryRjYAu0-s?si=M9roOyEVyA1_QsgY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+
+  <h1 class="titulo">Shekinah Kadosh Hinos da Harpa Cristã</h1>
+  
+  <ul class="ordem-principal">
+    <li><a href="../hinos-da-harpa/index.html">Hino</a></li>
+    <li><a href="../genesis/index.html">Bíblia Sagrada</a></li>
+    <li><a href="../videos-youtube/videosyoutube.html">Vídeos</a></li>
+    <li><a href="meusite.html">Shekinah Kadoshi</a></li>
+  </ul>
+
+  <div id="controls">
+    <div id="scroll-up" class="control-button">-</div>
+    <div id="scroll-down" class="control-button">+</div>
+    <div id="scroll-toggle" class="control-button">Play</div>
+    <div id="scroll-reset" class="control-button">Reset</div>
+    <div id="transpose-up" class="control-button">Transpose +</div>
+    <div id="transpose-down" class="control-button">Transpose -</div>
+    <div id="font-size-up" class="control-button">A+</div>
+    <div id="font-size-down" class="control-button">A-</div>
+  </div>
+
+  <div id="scroll-container">
+    <pre id="content">
+
+
+     
+
+                <b>Am</b>                       <b>E</b>              <b>Am</b>
+          Deus forte como Jeová, não há outro que eu conheça
+               <b>Am</b>                       <b>E</b>              <b>A7</b>
+          Deus forte como Jeová, não há outro que eu conheça
+          
+                    <b>Dm</b>              <b>Am</b>
+          Deus de vitória, varão de guerra
+                   <b>E</b>              <b>A7</b>
+          Deus poderoso é o Senhor
+                    <b>Dm</b>              <b>Am</b>
+          Deus de vitória, varão de guerra
+                   <b>E</b>            <b>Am</b>
+          Deus poderoso é o Senhor
+          
+          
+                                <b>E</b>                      <b>Am</b>
+          Onde, onde está o seu Deus, onde, onde ele está
+                                <b>E</b>                      <b>Am</b>
+          Onde, onde está o seu Deus, onde, onde ele está
+          
+          
+              <b>A7</b>           <b>Dm</b>      <b>G</b>              <b>C</b>
+          Meu Deus está no céu, também no meu coração
+               <b>F</b>           <b>Dm</b>          <b>E</b>           <b>A7</b>
+          O do mundo está morto, mas o meu ressuscitou
+                           <b>Dm</b>      <b>G</b>              <b>C</b>
+          Meu Deus está no céu, também no meu coração
+               <b>F</b>           <b>Dm</b>          <b>E</b>           <b>Am</b>
+          O do mundo está morto, mas o meu ressuscitou
+   
+   
+   
+   
+                       Glória a Deus
+   
+   
+   </pre>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      let isScrolling = false;
+      let scrollSpeed = 1;
+      let scrollInterval;
+      const scrollContainer = document.getElementById('scroll-container');
+      const scrollUpButton = document.getElementById('scroll-up');
+      const scrollDownButton = document.getElementById('scroll-down');
+      const scrollToggleButton = document.getElementById('scroll-toggle');
+      const scrollResetButton = document.getElementById('scroll-reset');
+      const transposeUpButton = document.getElementById('transpose-up');
+      const transposeDownButton = document.getElementById('transpose-down');
+      const fontSizeUpButton = document.getElementById('font-size-up');
+      const fontSizeDownButton = document.getElementById('font-size-down');
+
+      function startScrolling() {
+        if (!isScrolling) {
+          scrollInterval = setInterval(() => {
+            scrollContainer.scrollBy(0, scrollSpeed);
+          }, 200);
+          isScrolling = true;
+          scrollToggleButton.textContent = 'Pause';
+        }
+      }
+
+      function stopScrolling() {
+        if (isScrolling) {
+          clearInterval(scrollInterval);
+          isScrolling = false;
+          scrollToggleButton.textContent = 'Play';
+        }
+      }
+
+      scrollUpButton.addEventListener('click', () => {
+        scrollSpeed = Math.max(scrollSpeed - 1, 1);
+      });
+
+      scrollDownButton.addEventListener('click', () => {
+        scrollSpeed += 1;
+      });
+
+      scrollToggleButton.addEventListener('click', () => {
+        if (isScrolling) {
+          stopScrolling();
+        } else {
+          startScrolling();
+        }
+      });
+
+      scrollResetButton.addEventListener('click', () => {
+        scrollContainer.scrollTo(0, 0);
+        stopScrolling();
+        scrollSpeed = 1;
+      });
+
+      transposeUpButton.addEventListener('click', () => {
+        transposeChords(1);
+      });
+
+      transposeDownButton.addEventListener('click', () => {
+        transposeChords(-1);
+      });
+
+      fontSizeUpButton.addEventListener('click', () => {
+        adjustFontSize(1);
+      });
+
+      fontSizeDownButton.addEventListener('click', () => {
+        adjustFontSize(-1);
+      });
+
+      function transposeChords(semitones) {
+        const chordElements = content.querySelectorAll('b');
+        chordElements.forEach(chordElement => {
+          chordElement.textContent = transposeChord(chordElement.textContent, semitones);
+        });
+      }
+
+      function transposeChord(chord, semitones) {
+        const notes = ['A', 'A#', 'B', 'C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#'];
+        const chordParts = chord.split('/');
+        const transposedChord = chordParts.map(part => {
+          const noteMatch = part.match(/[A-G][#b]?/);
+          if (!noteMatch) return part;
+          const note = noteMatch[0];
+          const noteIndex = notes.indexOf(note);
+          if (noteIndex === -1) return part;
+          const newIndex = (noteIndex + semitones + notes.length) % notes.length;
+          return part.replace(note, notes[newIndex]);
+        });
+        return transposedChord.join('/');
+      }
+
+      function adjustFontSize(change) {
+        const currentSize = parseFloat(window.getComputedStyle(content).fontSize);
+        content.style.fontSize = `${currentSize + change}px`;
+      }
+    });
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

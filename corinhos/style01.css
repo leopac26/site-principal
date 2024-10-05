@@ -1,0 +1,176 @@
+element.style {
+}
+li {
+    list-style: none;
+}
+html, body, div, h1, h2, h3, h4, h5, h6, p, ol, ul, li, img, form, input, label, select, textarea, table, th, tr, td, thead, tbody, tfoot, blockquote, iframe, hr, button, center, a, span {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li {
+    list-style: none;
+}
+a, body, button, div, form, h1, h2, html, iframe, img, input, label, li, ol, p, select, span, ul {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+user agent stylesheet
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+#side-menu #side-font ul, #side-menu #side-tom ul {
+    display: block;
+    line-height: 2.8;
+}
+#side-menu #side-font ul, #side-menu #side-tom ul {
+    display: block;
+    line-height: 2.8;
+}
+#side-menu .side-controls ul {
+    position: absolute;
+    top: 0;
+    left: 25px;
+    right: 25px;
+    transition: top .2s;
+    text-align: center;
+    cursor: pointer;
+}
+#side-menu .side-controls ul {
+    position: absolute;
+    top: 0;
+    left: 25px;
+    right: 25px;
+    text-align: center;
+}
+user agent stylesheet
+ul ul {
+    list-style-type: circle;
+}
+user agent stylesheet
+ul {
+    list-style-type: disc;
+}
+#side-menu>ul>li>.btn, #side-menu .side-item {
+    height: 32px;
+    line-height: 2;
+    font-size: 11px;
+    font-weight: normal;
+    border-radius: 8px;
+}
+#side-menu .side-item, #side-menu>ul>li>.btn {
+    height: 32px;
+    line-height: 2;
+    font-size: 11px;
+    font-weight: 400;
+    border-radius: 8px;
+}
+#side-menu>ul>li>.btn {
+    height: 32px;
+    line-height: 2;
+    font-size: 11px;
+    font-weight: 400;
+    border-radius: 8px;
+}
+#side-menu ul .btn {
+    color: #757575;
+    text-align: center;
+    margin-bottom: 10px;
+}
+#side-menu ul .btn {
+    color: #757575;
+    text-align: center;
+    margin-bottom: 10px;
+}
+#side-menu .side-controls {
+    text-align: center;
+    padding-left: 0;
+    overflow: hidden;
+    cursor: default;
+    position: relative;
+}
+#side-menu .side-controls {
+    text-align: center;
+    padding-left: 0;
+    overflow: hidden;
+    position: relative;
+}
+.btn-full {
+    width: 100%;
+    height: 36px;
+    display: block;
+    text-align: center;
+    border-radius: 10px;
+    color: #424242;
+    font-size: 13px;
+    padding: 2px 15px;
+}
+.btn {
+    display: inline-block;
+    height: 32px;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 30px;
+    border: solid 1px #e0e0e0;
+    color: #212121;
+    padding: 0 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    position: relative;
+    background: #fff;
+    box-sizing: border-box;
+}
+.btn-full {
+    width: 100%;
+    height: 36px;
+    display: block;
+    text-align: center;
+    border-radius: 10px;
+    color: #424242;
+    font-size: 13px;
+    padding: 2px 15px;
+}
+.btn {
+    display: inline-block;
+    height: 32px;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 30px;
+    border: 1px solid #e0e0e0;
+    color: #212121;
+    padding: 0 15px;
+    border-radius: 8px;
+    position: relative;
+    background: #fff;
+    box-sizing: border-box;
+}
+user agent stylesheet
+li {
+    text-align: -webkit-match-parent;
+}
+user agent stylesheet
+ul {
+    list-style-type: disc;
+}
+body, small {
+    font-size: 13px;
+}
+body {
+    color: #424242;
+    word-wrap: break-word;
+    font: 13px / 1.1 Arial, Helvetica, sans-serif;
+    min-width: 100%;
+    -webkit-font-smoothing: antialiased;
+}
+body {
+    font-size: 13px;
+}
+body {
+    color: #424242;
+    word-wrap: break-word;
+    font: 13px / 1.1 Arial, Helvetica, sans-serif;
+    min-width: 100%;
+    -webkit-font-smoothing: antialiased;
+}

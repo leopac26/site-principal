@@ -1,0 +1,108 @@
+
+  body{
+background: url(I\ Declare\ World\ Peace.jpg);
+background-repeat: no-repeat;
+background-size: 100% 100% ;
+display: flex;}
+
+.logomarca{
+  margin: 0px -80px 0px 0px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: absolute;
+}
+
+#video-menu{
+  color: rgb(116, 180, 180);
+  text-align: center;
+  top: 30px;
+  position: absolute;
+  text-indent: 30px;
+  padding-left: 400px;
+  font-size: 30pt;
+  font-style: border;
+font-family: cursive;}
+  
+  
+.central{
+  margin: 100px 0px 0px 0px;}  
+
+.snippet-ytb-lazy{width: 250px;
+aspect-ratio: 16/9;
+background-color: mediumturquoise;
+border-radius: 10px;
+overflow: hidden;
+padding: 0px;
+left: 0px;
+margin: 25px;
+opacity: 0.8;
+}
+
+.snippet-ytb-lazy .player{display: flex;
+align-items: center;
+justify-content: center;
+cursor: pointer;}
+
+.snippet-ytb-lazy img{
+  position: absolute;
+  width: 250px;
+  height: 180px;
+top: 0;
+left: 0;}
+
+.snippet-ytb-lazy svg{
+  width: 10px;
+  line-height: 0;
+  z-index: 1;
+  padding: 2px;
+  background-color:#fff;
+  border-radius: 50%;
+}
+
+.snippet-ytb-lazy .player, .snippet-ytb-lazy iframe{position: relative;
+width: 250px;
+height:250px;
+background-color: inherit;
+}
+h2{
+  color:blue;
+  position: absolute;
+  top: 40px;
+  background: rgba(255, 255, 255, 0.692);
+}
+
+@media(max-width:1200px){
+body{background-size: 100% 200% ;}
+
+
+  .video-menu{font-size: 1.1rem;
+    text-indent: .1rem;
+    padding-left: 130px;
+   }
+   .snippet-ytb-lazy{
+    width: 80px;
+    
+   }
+
+   .snippet-ytb-lazy img{width: 80px;
+  height: 50px;}
+
+  .snippet-ytb-lazy .player, .snippet-ytb-lazy iframe{
+    width: 80px;
+    height:60px;
+    }
+    .central{
+      width: 100px;
+      height: 200px;     
+    }
+    .logomarca{
+      width: 40px;
+      height: 30px;
+  }
+}
+
+
+
+  
+  

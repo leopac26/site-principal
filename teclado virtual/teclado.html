@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="teclado.css">
+    
+    <link rel="stylesheet" href="../hinos-da-harpa/cifra.css">
+
+    <title>Teclado JS</title>
+  </head>
+  <body>
+
+    <style>
+
+      
+      
+      
+      #principal{
+        margin: 120px;
+      list-style: none;
+      text-transform: capitalize;
+      font-size: 16px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 700;}
+      
+      #principal li::first-letter {color: red;}
+      
+      #principal li a:link{color: rgb(97, 0, 252);}
+      
+      #principal li a:visited{color: rgb(185, 34, 255);}
+      
+      #principal li a:hover{color: rgb(226, 141, 43);
+      background: rgb(228, 221, 221);}
+      
+      ul.ordem-principal{list-style: none;}
+      
+      
+      
+      ul.ordem-principal li {
+          background-color: #d5e7e9;
+          display: inline-block;
+          align-items: center;
+          align-content: center;
+          padding: 5px;
+          text-decoration: none;
+          transition-duration: 0.5s;
+          border: 1px solid black;
+          margin:5px;
+          border-radius: 10%;
+          
+      
+      
+      }
+      
+      ul.ordem-principal li a {
+          text-decoration: none;
+          color: rgb(24, 9, 9);
+          text-transform: uppercase;
+          text-align: center;
+          
+      }
+      
+      ul.ordem-principal li ul {
+          visibility: hidden;
+          opacity: 0;
+          min-width: 5rem;
+          position: fixed;
+          transition: all 0.5s ease;
+          margin: 0;
+          display: none;
+          box-shadow: 0px 8px 16px 0px rgba(92, 1, 240, 0.315);
+      }
+      
+      
+      ul.ordem-principal li ul li {
+          clear: both;
+          width: 100%;
+          padding: 0 ;
+          margin-top: 3px;
+          width: 100px;
+          display: block;
+          border: none;
+      }
+      
+      ul.ordem-principal li:hover,
+      ul.ordem-principal li:focus-within {
+          background-color: rgb(252, 252, 252);
+          cursor: pointer;
+          font-weight: bold;
+          transition: 0.3s;
+      }
+      
+      
+      
+      a:hover {
+          color: rgb(61, 9, 250);
+      }
+      
+      /*controla a exibiçao do dropdown*/
+      
+      ul.ordem-principal li:hover>ul,
+      ul.ordem-principal li:focus-within>ul,
+      ul.ordem-principal li ul:hover,
+      ul.ordem-principal li ul:focus {
+          visibility: visible;
+          opacity: 1;
+          display: block;
+      }
+
+      .titulo-menu{
+        margin: -550px 0px 0 0;
+      }
+
+      .titulo-menu{border: 1px solid blue;
+    background: blue;
+  color: rgb(250, 153, 9);
+  margin: -550px 0px 0px 0px ;
+  font-size: 48px;
+  text-align: center;
+  width: 100vw;
+  justify-content: center;
+  position: fixed;
+  } 
+
+  .menu-principal{
+    width: 100%;
+    border: 1px solid black;
+    background:blue;
+    color: white;
+    margin-top: -70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    
+  }
+
+  .menu-tabela{
+    margin-top:50px;
+    background: blueviolet;
+    width: 100vw;
+  }
+
+  .menu-tabela a {
+    color:white;
+  margin: 30px;}
+    
+
+     
+      
+        </style>
+      
+        <body>
+      
+          
+      
+          <h1 class="titulo-menu">Shekinah Kadosh Hinos da Harpa Cristã</h1>
+
+          <table class="menu-principal">
+          <tr class="menu-tabela">
+          <td><a href="../videos-youtube/videosyoutube.html"> videos</a></td>
+          <td><a href="../louvores/index.html">louvores</a></td>
+          <td><a href="../genesis/index.html">biblia sagrada </a></td>
+          <td><a href="teclado.html">Teclado Virtual </a></td>
+          <td><a href="../hinos-da-harpa/index.html">hinos</a></td>
+          <td><a href="../quiz-Biblico/quiz.html" target="_blank">quiz </a></td>
+          <td><a href="">Playback </a></td>
+          <td><a href="#"></a></td>
+          </tr>
+          
+          </table>
+
+
+    <div class="keyboard-container">
+      <div class="toggle-button" title="Esconder/Mostrar teclas do computador"></div>
+
+      <div class="keys">
+        <div class="white-keys">
+          <div class="key white-key" data-music-note="C1">Q</div>
+          <div class="key white-key" data-music-note="D1">W</div>
+          <div class="key white-key" data-music-note="E1">E</div>
+          <div class="key white-key" data-music-note="F1">R</div>
+          <div class="key white-key" data-music-note="G1">T</div>
+          <div class="key white-key" data-music-note="A1">Y</div>
+          <div class="key white-key" data-music-note="B1">U</div>
+          <div class="key white-key" data-music-note="C2">Z</div>
+          <div class="key white-key" data-music-note="D2">X</div>
+          <div class="key white-key" data-music-note="E2">C</div>
+          <div class="key white-key" data-music-note="F2">V</div>
+          <div class="key white-key" data-music-note="G2">B</div>
+          <div class="key white-key" data-music-note="A2">N</div>
+          <div class="key white-key" data-music-note="B2">M</div>
+        </div>
+
+        <div class="black-keys">
+          <div class="key black-key" data-music-note="C1s">2</div>
+          <div class="key black-key" data-music-note="D1s">3</div>
+          <div class="key black-key" data-music-note="F1s">5</div>
+          <div class="key black-key" data-music-note="G1s">6</div>
+          <div class="key black-key" data-music-note="A1s">7</div>
+          <div class="key black-key" data-music-note="C2s">S</div>
+          <div class="key black-key" data-music-note="D2s">D</div>
+          <div class="key black-key" data-music-note="F2s">G</div>
+          <div class="key black-key" data-music-note="G2s">H</div>
+          <div class="key black-key" data-music-note="A2s">J</div>
+        </div>
+      </div>
+    </div>
+    
+    <script src="teclado.js"></script>
+  </body>
+</html>

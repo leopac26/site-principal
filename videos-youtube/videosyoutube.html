@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="videos.css">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>videos do youtube</title>
+</head>
+
+<script src="videos.js" async>   </script>
+
+<body>
+  <h1 id="video-menu">Assembleia de Deus Shekinah Mistério Kadosh</h1>
+
+  <style>
+
+    .titulo{
+      border: 1px solid black;
+      background: blue;
+      color: white;
+      position: fixed;
+      width: 100%;
+      height: 40px;
+      top: -19px;
+      text-align: center;
+      
+    }
+    
+    
+    #principal-corinhos{
+      margin: 120px;
+    list-style: none;
+    text-transform: capitalize;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;}
+    
+    #principal li::first-letter {color: red;}
+    
+    #principal li a:link{color: rgb(97, 0, 252);}
+    
+    #principal li a:visited{color: rgb(185, 34, 255);}
+    
+    #principal li a:hover{color: rgb(226, 141, 43);
+    background: rgb(228, 221, 221);}
+    
+    ul.ordem-principal{list-style: none;}
+    
+    .menu-principal {
+        position: fixed;
+        width: 900px;
+    background:blue;
+    left:200px;
+    margin-top: -30px;
+    font-size: 16px;}
+    
+    
+    ul.ordem-principal li {
+        background-color: #d5e7e9;
+        display: inline-block;
+        align-items: center;
+        align-content: center;
+        padding: 5px;
+        text-decoration: none;
+        transition-duration: 0.5s;
+        border: 1px solid black;
+        margin:5px;
+        border-radius: 10%;
+        
+    
+    
+    }
+    
+    ul.ordem-principal li a {
+        text-decoration: none;
+        color: rgb(24, 9, 9);
+        text-transform: uppercase;
+        text-align: center;
+        
+    }
+    
+    ul.ordem-principal li ul {
+        visibility: hidden;
+        opacity: 0;
+        min-width: 5rem;
+        position: fixed;
+        transition: all 0.5s ease;
+        margin: 0;
+        display: none;
+        box-shadow: 0px 8px 16px 0px rgba(92, 1, 240, 0.315);
+    }
+    
+    
+    ul.ordem-principal li ul li {
+        clear: both;
+        width: 100%;
+        padding: 0 ;
+        margin-top: 3px;
+        width: 100px;
+        display: block;
+        border: none;
+    }
+    
+    ul.ordem-principal li:hover,
+    ul.ordem-principal li:focus-within {
+        background-color: rgb(252, 252, 252);
+        cursor: pointer;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+    
+    
+    
+    a:hover {
+        color: rgb(61, 9, 250);
+    }
+    
+    /*controla a exibiçao do dropdown*/
+    
+    ul.ordem-principal li:hover>ul,
+    ul.ordem-principal li:focus-within>ul,
+    ul.ordem-principal li ul:hover,
+    ul.ordem-principal li ul:focus {
+        visibility: visible;
+        opacity: 1;
+        display: block;
+    }
+    
+    
+    @media(max-width:670px){
+     .menu-principal{
+      font-size:12px;
+      margin: 30px 0px 0px 0px;
+      height: 40px;
+      left: 10px;
+      
+
+    }
+    ul.ordem-principal{
+      padding: 10px;
+      font-size: 12px;
+      margin-top: -10px ;
+      
+    }
+    #principal {
+      font-size:16px;
+    }
+    
+    #video-menu{
+  text-align: center;
+  top: 90px;
+  text-indent: 0px;
+  padding-left: 10px;
+  font-size: 20px;
+}
+
+
+    }
+    
+          
+    
+    
+    
+    
+    
+    
+      </style>
+    
+      <body>
+        <h1 class="titulo-menu">Igreja Shekinah Ministério kadosh  </h1>
+
+        <table class="menu-principal">
+        <tr class="menu-tabela">
+        <td><a href="../videos-youtube/videosyoutube.html"> videos</a></td>
+        <td><a href="../louvores/index.html">louvores</a></td>
+        <td><a href="../genesis/index.html">biblia sagrada </a></td>
+        <td><a href="teclado virtual/teclado.html">Teclado Virtual </a></td>
+        <td><a href="../hinos-da-harpa/index.html">hinos</a></td>
+        <td><a href="../quiz-Biblico/quiz.html">quiz </a></td>
+        <td><a href="">Playback </a></td>
+        <td><a href="#"></a></td>
+        </tr>
+        
+        </table>
+        
+  <div class="central">
+    <div class="snippet-ytb-lazy" id="videoYtbLazy" data-id="d2GdgaBXgB4">
+      <div>
+        <div class="player">
+          
+          <img src="alivio lavinia.jpg" alt="foto lavinia" 
+        >
+          <svg viewbox="0 0 42 42" xmlns="http://www.w3.org/2000/svg">
+          <path d="m21 0c9.41989 0 0 9.4208 0 21C0 32.5792 9.41989 42 21 42C32.5801 42 42 32.5792 42 21C42 9.4208 32.5801 0 21 0ZM29.3484 21.7357L17.0984 29.6107C16.9549 29.7038 16.7891 29.75 16.625 29.75C16.4815 29.75 16.3362 29.7141 16.2063 29.6432C15.9243 29.4894 15.75 29.1954 15.75 28.875V13.125C15.75 12.8046 15.9243 12.5106 16.2063 12.3568C16.4832 12.2047 16.8301 12.214 17.0984 12.3893L29 3484 20.2643C29.5979 20.4249 29.75 20.7026 29.75 21C29.75 21.2974 29.5979 21.575 29.3484 21.73572"
+          fill="#0f88ee"></path>
+          </svg>
+          <h2>Alivio Lavinia vitória</h2>
+      </div>
+      
+
+</div>
+</div>
+    <div class="snippet-ytb-lazy" id="videoYtbLazy1" data-id="8Br7xyWCbyU">
+      <div>
+        <div class="player">
+          <img src="Image09.jpg" alt="foto lavinia" 
+        >
+          <svg viewbox="0 0 42 42" xmlns="http://www.w3.org/2000/svg">
+          <path d="m21 0c9.41989 0 0 9.4208 0 21C0 32.5792 9.41989 42 21 42C32.5801 42 42 32.5792 42 21C42 9.4208 32.5801 0 21 0ZM29.3484 21.7357L17.0984 29.6107C16.9549 29.7038 16.7891 29.75 16.625 29.75C16.4815 29.75 16.3362 29.7141 16.2063 29.6432C15.9243 29.4894 15.75 29.1954 15.75 28.875V13.125C15.75 12.8046 15.9243 12.5106 16.2063 12.3568C16.4832 12.2047 16.8301 12.214 17.0984 12.3893L29 3484 20.2643C29.5979 20.4249 29.75 20.7026 29.75 21C29.75 21.2974 29.5979 21.575 29.3484 21.73572"
+          fill="#0f88ee"></path>
+          </svg>
+          <h2>Em Fervente Oração<br>mulheres de fé</h2>
+      </div>
+
+</div>
+</div>
+    <div class="snippet-ytb-lazy" id="videoYtbLazy2" data-id="p7hzAwXmXPU">
+      <div>
+        <div class="player">
+          <img src="Image10.jpg" alt="foto lavinia" 
+        >
+          <svg viewbox="0 0 42 42" xmlns="http://www.w3.org/2000/svg">
+          <path d="m21 0c9.41989 0 0 9.4208 0 21C0 32.5792 9.41989 42 21 42C32.5801 42 42 32.5792 42 21C42 9.4208 32.5801 0 21 0ZM29.3484 21.7357L17.0984 29.6107C16.9549 29.7038 16.7891 29.75 16.625 29.75C16.4815 29.75 16.3362 29.7141 16.2063 29.6432C15.9243 29.4894 15.75 29.1954 15.75 28.875V13.125C15.75 12.8046 15.9243 12.5106 16.2063 12.3568C16.4832 12.2047 16.8301 12.214 17.0984 12.3893L29 3484 20.2643C29.5979 20.4249 29.75 20.7026 29.75 21C29.75 21.2974 29.5979 21.575 29.3484 21.73572"
+          fill="#0f88ee"></path>
+          </svg>
+          <h2>Opressão Lavinia Vitória</h2>
+      </div>
+
+</div>
+</div>
+    <div class="snippet-ytb-lazy" id="videoYtbLazy3" data-id="ozzxrQNVedM">
+      <div>
+        <div class="player">
+          <img src="Image11.jpg" alt="foto lavinia" 
+        >
+          <svg viewbox="0 0 42 42" xmlns="http://www.w3.org/2000/svg">
+          <path d="m21 0c9.41989 0 0 9.4208 0 21C0 32.5792 9.41989 42 21 42C32.5801 42 42 32.5792 42 21C42 9.4208 32.5801 0 21 0ZM29.3484 21.7357L17.0984 29.6107C16.9549 29.7038 16.7891 29.75 16.625 29.75C16.4815 29.75 16.3362 29.7141 16.2063 29.6432C15.9243 29.4894 15.75 29.1954 15.75 28.875V13.125C15.75 12.8046 15.9243 12.5106 16.2063 12.3568C16.4832 12.2047 16.8301 12.214 17.0984 12.3893L29 3484 20.2643C29.5979 20.4249 29.75 20.7026 29.75 21C29.75 21.2974 29.5979 21.575 29.3484 21.73572"
+          fill="#0f88ee"></path>
+          </svg>
+          
+          <h2>Sou Teu Pai-Cover /Lavínia Vitória</h2>
+          
+      </div>
+
+</div>
+</div>
+    <div class="snippet-ytb-lazy" id="videoYtbLazy4" data-id="5wovuMJXi50">
+      <div>
+        <div class="player">
+          <img src="Image12.jpg" alt="foto lavinia" 
+        >
+          <svg viewbox="0 0 42 42" xmlns="http://www.w3.org/2000/svg">
+          <path d="m21 0c9.41989 0 0 9.4208 0 21C0 32.5792 9.41989 42 21 42C32.5801 42 42 32.5792 42 21C42 9.4208 32.5801 0 21 0ZM29.3484 21.7357L17.0984 29.6107C16.9549 29.7038 16.7891 29.75 16.625 29.75C16.4815 29.75 16.3362 29.7141 16.2063 29.6432C15.9243 29.4894 15.75 29.1954 15.75 28.875V13.125C15.75 12.8046 15.9243 12.5106 16.2063 12.3568C16.4832 12.2047 16.8301 12.214 17.0984 12.3893L29 3484 20.2643C29.5979 20.4249 29.75 20.7026 29.75 21C29.75 21.2974 29.5979 21.575 29.3484 21.73572"
+          fill="#0f88ee"></path>
+          </svg>
+          <h2>culto no lar com lavinia vitoria louvando a DEUS</h2>
+      </div>
+    </div>
+</div>
+</div>
+
+<div class="central">
+    <div class="snippet-ytb-lazy" id="videoYtbLazy5" data-id="Iaf0GtEySbg">
+      <div>
+        <div class="player">
+          <img src="Image91.jpg" alt="foto lavinia" 
+        >
+          <svg viewbox="0 0 42 42" xmlns="http://www.w3.org/2000/svg">
+          <path d="m21 0c9.41989 0 0 9.4208 0 21C0 32.5792 9.41989 42 21 42C32.5801 42 42 32.5792 42 21C42 9.4208 32.5801 0 21 0ZM29.3484 21.7357L17.0984 29.6107C16.9549 29.7038 16.7891 29.75 16.625 29.75C16.4815 29.75 16.3362 29.7141 16.2063 29.6432C15.9243 29.4894 15.75 29.1954 15.75 28.875V13.125C15.75 12.8046 15.9243 12.5106 16.2063 12.3568C16.4832 12.2047 16.8301 12.214 17.0984 12.3893L29 3484 20.2643C29.5979 20.4249 29.75 20.7026 29.75 21C29.75 21.2974 29.5979 21.575 29.3484 21.73572"
+          fill="#0f88ee"></path>
+          </svg>
+          <h2>Tua ´Presença <br>Cover lavinia vitoria </h2>
+      </div>
+
+</div>
+</div>
+    <div class="snippet-ytb-lazy" id="videoYtbLazy6" data-id="CCSHflrxRsU">
+      <div>
+        <div class="player">
+          <img src="Image90.jpg" alt="foto lavinia" 
+        >
+          <svg viewbox="0 0 42 42" xmlns="http://www.w3.org/2000/svg">
+          <path d="m21 0c9.41989 0 0 9.4208 0 21C0 32.5792 9.41989 42 21 42C32.5801 42 42 32.5792 42 21C42 9.4208 32.5801 0 21 0ZM29.3484 21.7357L17.0984 29.6107C16.9549 29.7038 16.7891 29.75 16.625 29.75C16.4815 29.75 16.3362 29.7141 16.2063 29.6432C15.9243 29.4894 15.75 29.1954 15.75 28.875V13.125C15.75 12.8046 15.9243 12.5106 16.2063 12.3568C16.4832 12.2047 16.8301 12.214 17.0984 12.3893L29 3484 20.2643C29.5979 20.4249 29.75 20.7026 29.75 21C29.75 21.2974 29.5979 21.575 29.3484 21.73572"
+          fill="#0f88ee"></path>
+          </svg>
+      <h2>louvor filho com <br>lavinia vitoria</h2>
+    </div>
+
+</div>
+</div>
+    <div class="snippet-ytb-lazy" id="videoYtbLazy7" data-id="1l5sv4JycTI">
+      <div>
+        <div class="player">
+          <img src="Image58.jpg" alt="foto lavinia" 
+        >
+          <svg viewbox="0 0 42 42" xmlns="http://www.w3.org/2000/svg">
+          <path d="m21 0c9.41989 0 0 9.4208 0 21C0 32.5792 9.41989 42 21 42C32.5801 42 42 32.5792 42 21C42 9.4208 32.5801 0 21 0ZM29.3484 21.7357L17.0984 29.6107C16.9549 29.7038 16.7891 29.75 16.625 29.75C16.4815 29.75 16.3362 29.7141 16.2063 29.6432C15.9243 29.4894 15.75 29.1954 15.75 28.875V13.125C15.75 12.8046 15.9243 12.5106 16.2063 12.3568C16.4832 12.2047 16.8301 12.214 17.0984 12.3893L29 3484 20.2643C29.5979 20.4249 29.75 20.7026 29.75 21C29.75 21.2974 29.5979 21.575 29.3484 21.73572"
+          fill="#0f88ee"></path>
+          </svg>
+          <h2>louvor (passa jesus) com lavinia vitoria</h2>
+      </div>
+
+</div>
+</div>
+    <div class="snippet-ytb-lazy" id="videoYtbLazy8" data-id="XTQ66rZ-620">
+      <div>
+        <div class="player">
+          <img src="Image60.jpg" alt="foto lavinia" 
+        >
+          <svg viewbox="0 0 42 42" xmlns="http://www.w3.org/2000/svg">
+          <path d="m21 0c9.41989 0 0 9.4208 0 21C0 32.5792 9.41989 42 21 42C32.5801 42 42 32.5792 42 21C42 9.4208 32.5801 0 21 0ZM29.3484 21.7357L17.0984 29.6107C16.9549 29.7038 16.7891 29.75 16.625 29.75C16.4815 29.75 16.3362 29.7141 16.2063 29.6432C15.9243 29.4894 15.75 29.1954 15.75 28.875V13.125C15.75 12.8046 15.9243 12.5106 16.2063 12.3568C16.4832 12.2047 16.8301 12.214 17.0984 12.3893L29 3484 20.2643C29.5979 20.4249 29.75 20.7026 29.75 21C29.75 21.2974 29.5979 21.575 29.3484 21.73572"
+          fill="#0f88ee"></path>
+          </svg>
+      </div>
+
+</div>
+</div>
+    <div class="snippet-ytb-lazy" id="videoYtbLazy9" data-id="-_vaOIfXskc">
+      <div>
+        <div class="player">
+          <img src="Image62.jpg" alt="foto lavinia" 
+        >
+          <svg viewbox="0 0 42 42" xmlns="http://www.w3.org/2000/svg">
+          <path d="m21 0c9.41989 0 0 9.4208 0 21C0 32.5792 9.41989 42 21 42C32.5801 42 42 32.5792 42 21C42 9.4208 32.5801 0 21 0ZM29.3484 21.7357L17.0984 29.6107C16.9549 29.7038 16.7891 29.75 16.625 29.75C16.4815 29.75 16.3362 29.7141 16.2063 29.6432C15.9243 29.4894 15.75 29.1954 15.75 28.875V13.125C15.75 12.8046 15.9243 12.5106 16.2063 12.3568C16.4832 12.2047 16.8301 12.214 17.0984 12.3893L29 3484 20.2643C29.5979 20.4249 29.75 20.7026 29.75 21C29.75 21.2974 29.5979 21.575 29.3484 21.73572"
+          fill="#0f88ee"></path>
+          </svg>
+          <h2>Uma Novidade</h2>
+      </div>
+
+</div>
+</div>
+</div>
+
+<div class="central">
+    <div class="snippet-ytb-lazy" id="videoYtbLazy10" data-id="g3Qxx2wzGdM">
+      <div>
+        <div class="player">
+          <img src="Image64.jpg" alt="foto lavinia" 
+        >
+          <svg viewbox="0 0 42 42" xmlns="http://www.w3.org/2000/svg">
+          <path d="m21 0c9.41989 0 0 9.4208 0 21C0 32.5792 9.41989 42 21 42C32.5801 42 42 32.5792 42 21C42 9.4208 32.5801 0 21 0ZM29.3484 21.7357L17.0984 29.6107C16.9549 29.7038 16.7891 29.75 16.625 29.75C16.4815 29.75 16.3362 29.7141 16.2063 29.6432C15.9243 29.4894 15.75 29.1954 15.75 28.875V13.125C15.75 12.8046 15.9243 12.5106 16.2063 12.3568C16.4832 12.2047 16.8301 12.214 17.0984 12.3893L29 3484 20.2643C29.5979 20.4249 29.75 20.7026 29.75 21C29.75 21.2974 29.5979 21.575 29.3484 21.73572"
+          fill="#0f88ee"></path>
+          </svg>
+          <h2>O Céu esta me sustentando</h2>
+      </div>
+
+</div>
+</div>
+    <div class="snippet-ytb-lazy" id="videoYtbLazy11" data-id="8Br7xyWCbyU">
+      <div>
+        <div class="player">
+          <img src="Image66.jpg" alt="foto lavinia" 
+        >
+          <svg viewbox="0 0 42 42" xmlns="http://www.w3.org/2000/svg">
+          <path d="m21 0c9.41989 0 0 9.4208 0 21C0 32.5792 9.41989 42 21 42C32.5801 42 42 32.5792 42 21C42 9.4208 32.5801 0 21 0ZM29.3484 21.7357L17.0984 29.6107C16.9549 29.7038 16.7891 29.75 16.625 29.75C16.4815 29.75 16.3362 29.7141 16.2063 29.6432C15.9243 29.4894 15.75 29.1954 15.75 28.875V13.125C15.75 12.8046 15.9243 12.5106 16.2063 12.3568C16.4832 12.2047 16.8301 12.214 17.0984 12.3893L29 3484 20.2643C29.5979 20.4249 29.75 20.7026 29.75 21C29.75 21.2974 29.5979 21.575 29.3484 21.73572"
+          fill="#0f88ee"></path>
+          </svg>
+          <h2>louvor (passa jesus) com lavinia vitoria</h2>
+      </div>
+
+</div>
+</div>
+    <div class="snippet-ytb-lazy" id="videoYtbLazy12" data-id="8Br7xyWCbyU">
+      <div>
+        <div class="player">
+          <img src="Image83.jpg" alt="foto lavinia" 
+        >
+          <svg viewbox="0 0 42 42" xmlns="http://www.w3.org/2000/svg">
+          <path d="m21 0c9.41989 0 0 9.4208 0 21C0 32.5792 9.41989 42 21 42C32.5801 42 42 32.5792 42 21C42 9.4208 32.5801 0 21 0ZM29.3484 21.7357L17.0984 29.6107C16.9549 29.7038 16.7891 29.75 16.625 29.75C16.4815 29.75 16.3362 29.7141 16.2063 29.6432C15.9243 29.4894 15.75 29.1954 15.75 28.875V13.125C15.75 12.8046 15.9243 12.5106 16.2063 12.3568C16.4832 12.2047 16.8301 12.214 17.0984 12.3893L29 3484 20.2643C29.5979 20.4249 29.75 20.7026 29.75 21C29.75 21.2974 29.5979 21.575 29.3484 21.73572"
+          fill="#0f88ee"></path>
+          </svg>
+      </div>
+
+</div>
+</div>
+    <div class="snippet-ytb-lazy" id="videoYtbLazy13" data-id="8Br7xyWCbyU">
+      <div>
+        <div class="player">
+          <img src="Image85.jpg" alt="foto lavinia" 
+        >
+          <svg viewbox="0 0 42 42" xmlns="http://www.w3.org/2000/svg">
+          <path d="m21 0c9.41989 0 0 9.4208 0 21C0 32.5792 9.41989 42 21 42C32.5801 42 42 32.5792 42 21C42 9.4208 32.5801 0 21 0ZM29.3484 21.7357L17.0984 29.6107C16.9549 29.7038 16.7891 29.75 16.625 29.75C16.4815 29.75 16.3362 29.7141 16.2063 29.6432C15.9243 29.4894 15.75 29.1954 15.75 28.875V13.125C15.75 12.8046 15.9243 12.5106 16.2063 12.3568C16.4832 12.2047 16.8301 12.214 17.0984 12.3893L29 3484 20.2643C29.5979 20.4249 29.75 20.7026 29.75 21C29.75 21.2974 29.5979 21.575 29.3484 21.73572"
+          fill="#0f88ee"></path>
+          </svg>
+      </div>
+
+</div>
+</div>
+    <div class="snippet-ytb-lazy" id="videoYtbLazy14" data-id="8Br7xyWCbyU">
+      <div>
+        <div class="player">
+          <img src="Image86.jpg" alt="foto lavinia" 
+        >
+          <svg viewbox="0 0 42 42" xmlns="http://www.w3.org/2000/svg">
+          <path d="m21 0c9.41989 0 0 9.4208 0 21C0 32.5792 9.41989 42 21 42C32.5801 42 42 32.5792 42 21C42 9.4208 32.5801 0 21 0ZM29.3484 21.7357L17.0984 29.6107C16.9549 29.7038 16.7891 29.75 16.625 29.75C16.4815 29.75 16.3362 29.7141 16.2063 29.6432C15.9243 29.4894 15.75 29.1954 15.75 28.875V13.125C15.75 12.8046 15.9243 12.5106 16.2063 12.3568C16.4832 12.2047 16.8301 12.214 17.0984 12.3893L29 3484 20.2643C29.5979 20.4249 29.75 20.7026 29.75 21C29.75 21.2974 29.5979 21.575 29.3484 21.73572"
+          fill="#0f88ee"></path>
+          </svg>
+      </div>
+
+</div>
+</div>
+</div>
+
+<div class="central">
+    <div class="snippet-ytb-lazy" id="videoYtbLazy15" data-id="8Br7xyWCbyU">
+      <div>
+        <div class="player">
+          <img src="Image89.jpg" alt="foto lavinia" 
+        >
+          <svg viewbox="0 0 42 42" xmlns="http://www.w3.org/2000/svg">
+          <path d="m21 0c9.41989 0 0 9.4208 0 21C0 32.5792 9.41989 42 21 42C32.5801 42 42 32.5792 42 21C42 9.4208 32.5801 0 21 0ZM29.3484 21.7357L17.0984 29.6107C16.9549 29.7038 16.7891 29.75 16.625 29.75C16.4815 29.75 16.3362 29.7141 16.2063 29.6432C15.9243 29.4894 15.75 29.1954 15.75 28.875V13.125C15.75 12.8046 15.9243 12.5106 16.2063 12.3568C16.4832 12.2047 16.8301 12.214 17.0984 12.3893L29 3484 20.2643C29.5979 20.4249 29.75 20.7026 29.75 21C29.75 21.2974 29.5979 21.575 29.3484 21.73572"
+          fill="#0f88ee"></path>
+          </svg>
+      </div>
+
+</div>
+</div>
+    <div class="snippet-ytb-lazy" id="videoYtbLazy16" data-id="8Br7xyWCbyU">
+      <div>
+        <div class="player">
+          <img src="Image88.jpg" alt="foto lavinia" 
+        >
+          <svg viewbox="0 0 42 42" xmlns="http://www.w3.org/2000/svg">
+          <path d="m21 0c9.41989 0 0 9.4208 0 21C0 32.5792 9.41989 42 21 42C32.5801 42 42 32.5792 42 21C42 9.4208 32.5801 0 21 0ZM29.3484 21.7357L17.0984 29.6107C16.9549 29.7038 16.7891 29.75 16.625 29.75C16.4815 29.75 16.3362 29.7141 16.2063 29.6432C15.9243 29.4894 15.75 29.1954 15.75 28.875V13.125C15.75 12.8046 15.9243 12.5106 16.2063 12.3568C16.4832 12.2047 16.8301 12.214 17.0984 12.3893L29 3484 20.2643C29.5979 20.4249 29.75 20.7026 29.75 21C29.75 21.2974 29.5979 21.575 29.3484 21.73572"
+          fill="#0f88ee"></path>
+          </svg>
+      </div>
+
+</div>
+</div>
+
+  
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="quiz.css">
+    
+    
+    <title>Quiz Biblico</title>
+</head>
+<body>
+
+
+    <style>
+
+        .titulo-quiz{
+          border: 1px solid black;
+          background: blue;
+          color: white;
+          position: fixed;
+          width: 100%;
+          height: 150px;
+          top: 0px;
+          text-align: center;
+        }
+
+              
+        
+        #principal-corinhos{
+          margin: 120px;
+        list-style: none;
+        text-transform: capitalize;
+        font-size: 16px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 700;}
+        
+        #principal li::first-letter {color: red;}
+        
+        #principal li a:link{color: rgb(97, 0, 252);}
+        
+        #principal li a:visited{color: rgb(185, 34, 255);}
+        
+        #principal li a:hover{color: rgb(226, 141, 43);
+        background: rgb(228, 221, 221);}
+        
+        ul.ordem-principal{list-style: none;}
+        
+        .menu-principal-quiz {
+            position: fixed;
+            margin-top:-700px;
+            width: 500px;
+        background:blue;
+        
+        font-size: 16px;}
+        
+        
+        ul.ordem-principal li {
+            background-color: #d5e7e9;
+            display: inline-block;
+            align-items: center;
+            align-content: center;
+            padding: 5px;
+            text-decoration: none;
+            transition-duration: 0.5s;
+            border: 1px solid black;
+            margin:5px;
+            border-radius: 10%;
+            
+        
+        
+        }
+        
+        ul.ordem-principal li a {
+            text-decoration: none;
+            color: rgb(24, 9, 9);
+            text-transform: uppercase;
+            text-align: center;
+            
+        }
+        
+        ul.ordem-principal li ul {
+            visibility: hidden;
+            opacity: 0;
+            min-width: 5rem;
+            position: fixed;
+            transition: all 0.5s ease;
+            margin: 0;
+            display: none;
+            box-shadow: 0px 8px 16px 0px rgba(92, 1, 240, 0.315);
+        }
+        
+        
+        ul.ordem-principal li ul li {
+            clear: both;
+            width: 100%;
+            padding: 0 ;
+            margin-top: 3px;
+            width: 100px;
+            display: block;
+            border: none;
+        }
+        
+        ul.ordem-principal li:hover,
+        ul.ordem-principal li:focus-within {
+            background-color: rgb(252, 252, 252);
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        
+        
+        
+        a:hover {
+            color: rgb(61, 9, 250);
+        }
+        
+        /*controla a exibiçao do dropdown*/
+        
+        ul.ordem-principal li:hover>ul,
+        ul.ordem-principal li:focus-within>ul,
+        ul.ordem-principal li ul:hover,
+        ul.ordem-principal li ul:focus {
+            visibility: visible;
+            opacity: 1;
+            display: block;
+        }
+        
+        
+        @media(max-width:670px){
+         .menu-principal-quiz{
+          font-size:12px;
+          margin:-530px 0px 0px 440px ;
+          height: 30px;
+         
+        }
+        ul.ordem-principal{
+          padding: 0px;
+          margin-left: -110px;
+        }
+        #principal {
+          font-size:16px;
+        }
+        .titulo-quiz{
+            font-size: 16px;
+            height: 90px;
+
+        }
+        
+        }         
+        
+        
+        
+        
+        
+        
+          </style>
+        
+          
+            <div class="menu-principal-quiz">
+              <ul class="ordem-principal">
+                  <li><a href="../index.html">menu
+                      <ul>
+                      
+                          <li class="#"><a href="hino.html"></a></li>
+                      </ul>
+                  </li>
+                  <li><a href="../genesis/index.html">biblia sagrada</a>
+                      <ul>
+                          <li class="lista2"><a href="#"></a></li>
+                          <li class="lista2"><a href="#"></a></li>
+                      </ul>
+                  </li>
+                  <li><a href="../hinos-da-harpa/index.html">Hinos</a>
+                      <ul>
+                          <li class="lista2"><a href="#"></a></li>
+                          <li class="lista2"><a href="#"></a></li>
+                      </ul>
+                  </li>
+                  <li><a href="../corinhos/corinhos.html">corinhos</a>
+                      <ul>
+                          <li class="lista2"><a href="../quiz-Biblico/quiz.html" target="_blank"></a></li>
+                          <li class="lista2"><a href="#"></a></li>
+                      </ul>
+                  </li>
+              
+        </ul>
+        
+        </div>
+
+
+
+    
+
+
+
+
+
+
+
+
+    <div class="container">
+    <div class="questions-container hide">
+    <span class="question">pergunta aqui</span>
+    <div class="answers-container">
+        <button class="answer button">Resposta 1</button>
+        <button class="answer button">Resposta 2</button>
+        <button class="answer button">Resposta 3</button>
+        <button class="answer button">Resposta 4</button>
+    </div>
+</div>
+<div class="controls-container"> 
+  <button class="start-quiz button">Começar Quiz!</button>
+  <button class="next-question button hide">Próxima pergunta</button>  
+</div>
+</div>
+
+<script src="quiz.js" async></script>
+</body>
+</html>
