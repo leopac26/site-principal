@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+  document.addEventListener('DOMContentLoaded', () => {
     let isScrolling = false;
     let scrollSpeed = 1;
     let scrollInterval;
@@ -113,4 +113,69 @@ document.addEventListener('DOMContentLoaded', () => {
       const currentFontSize = parseFloat(window.getComputedStyle(content, null).getPropertyValue('font-size'));
       content.style.fontSize = (currentFontSize + amount) + 'px';
     }
-  });
+  
+
+ // Função para mostrar os botões ao tocar na tela
+ function mostrarBotoes() {
+  scrollToggleButton.style.display = 'block';
+}
+
+// Detectar toque na tela em dispositivos móveis
+document.addEventListener('touchstart', function() {
+  mostrarBotoes();
+});
+
+// Também pode adicionar um listener para cliques, caso deseje suporte a desktop
+document.addEventListener('click', function() {
+  mostrarBotoes();
+});
+
+let hideTimeout;
+
+    // Função para mostrar os botões
+    function mostrarBotoes() {
+        scrollToggleButton.style.display = 'block';
+        mudarFundo.style.display = 'block';
+        scrollUpButton.style.display = 'block';
+        scrollDownButton.style.display = 'block';
+        scrollResetButton.style.display = 'block';
+        transposeUpButton.style.display = 'block';
+        transposeDownButton.style.display = 'block';
+        fontSizeUpButton.style.display = 'block';
+        fontSizeDownButton.style.display = 'block';
+        
+        // Limpa o temporizador anterior
+        clearTimeout(hideTimeout);
+
+        // Oculta os botões após 2 segundos
+        hideTimeout = setTimeout(() => {
+            esconderBotoes();
+        }, 2000);
+    }
+
+    // Função para esconder os botões
+    function esconderBotoes() {
+        scrollToggleButton.style.display = 'none';
+        mudarFundo.style.display = 'none';
+        scrollUpButton.style.display = 'none';
+        scrollDownButton.style.display = 'none';
+        scrollResetButton.style.display = 'none';
+        transposeUpButton.style.display = 'none';
+        transposeDownButton.style.display = 'none';
+        fontSizeUpButton.style.display = 'none';
+        fontSizeDownButton.style.display = 'none';
+    }
+
+// Detectar toque na tela em dispositivos móveis
+document.addEventListener('touchstart', function() {
+    mostrarBotoes();
+});
+
+// Também pode adicionar um listener para cliques, caso deseje suporte a desktop
+document.addEventListener('click', function() {
+    mostrarBotoes();
+});
+});
+
+  
+

@@ -430,4 +430,9 @@ pre {
     margin-top: 10px;
   }
 
+  #scroll-toggle{
+    display: none;
+    
+}
+
 }
