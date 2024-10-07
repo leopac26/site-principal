@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Oculta os botões após 2 segundos
       hideTimeout = setTimeout(() => {
           esconderBotoes();
-      }, 2000);
+      }, 8000);
   }
 
   // Função para esconder os botões
