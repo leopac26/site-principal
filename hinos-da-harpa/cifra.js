@@ -54,11 +54,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     transposeUpButton.addEventListener('click', () => {
-        transposeChords(1, 'sharp'); // Transpor para cima
+        transposeChords(1); // Transpor para cima
     });
 
     transposeDownButton.addEventListener('click', () => {
-        transposeChords(-1, 'flat'); // Transpor para baixo
+        transposeChords(-1); // Transpor para baixo
     });
 
     fontSizeUpButton.addEventListener('click', () => {
@@ -69,80 +69,35 @@ document.addEventListener('DOMContentLoaded', () => {
         adjustFontSize(-1); // Diminuir tamanho da fonte
     });
 
-    function transposeChords(semitones, preference) {
+    function transposeChords(semitones) {
         const chords = content.querySelectorAll('b');
         chords.forEach(chord => {
-            chord.innerHTML = transposeChord(chord.innerHTML, semitones, preference);
+            chord.innerHTML = transposeChord(chord.innerHTML, semitones);
         });
     }
 
-    function transposeChord(chord, semitones, preference) {
+    function transposeChord(chord, semitones) {
         const sharpKeys = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'];
         const flatKeys = ['C', 'Db', 'D', 'Eb', 'E', 'F', 'Gb', 'G', 'Ab', 'A', 'Bb', 'B'];
-    
+
         const chordRegex = /^([A-G])(b|#)?(.*)$/; // Regex para capturar a raiz, acidentais e sufixos
         const match = chord.match(chordRegex);
-    
+
         if (!match) return chord; // Retorna o acorde original se não corresponder ao regex
-    
+
         let [_, root, accidental, suffix] = match;
         accidental = accidental || '';
-    
-        let index;
-    
-        // Lógica de transposição com base nas preferências
-        if (preference === 'sharp') {
-            index = (sharpKeys.indexOf(root + accidental) + semitones + 12) % 12;
-            root = sharpKeys[index];
-        } else {
-            index = (flatKeys.indexOf(root + accidental) + semitones + 12) % 12;
-            root = flatKeys[index];
-        }
-    
-        // Ajustes para transposição
-        if (semitones > 0 && accidental === 'b') {
-            // Converte bemóis para naturais ao transpor para cima
-            switch (root) {
-                case 'Ab':
-                    root = 'A';
-                    break;
-                case 'Bb':
-                    root = 'B';
-                    break;
-                case 'Db':
-                    root = 'D';
-                    break;
-                case 'Eb':
-                    root = 'E';
-                    break;
-                case 'Gb':
-                    root = 'G';
-                    break;
-            }
-        }
-    
-        if (semitones < 0) {
-            // Converte naturais para bemóis ao transpor para baixo
-            switch (root) {
-                case 'A':
-                    root = 'Ab';
-                    break;
-                case 'B':
-                    root = 'Bb';
-                    break;
-                case 'D':
-                    root = 'Db';
-                    break;
-                case 'E':
-                    root = 'Eb';
-                    break;
-                case 'G':
-                    root = 'Gb';
-                    break;
-            }
-        }
-    
-        return root + suffix; // Retorna o acorde transposto
+
+        let isFlat = accidental === 'b';
+        let keys = isFlat ? flatKeys : sharpKeys;
+
+        let index = keys.indexOf(root + accidental);
+        if (index === -1) return chord; // Retorna o acorde original se não encontrar o índice
+
+        index = (index + semitones + 12) % 12;
+        let newChord = keys[index];
+
+        return newChord + suffix; // Retorna o acorde transposto com o sufixo
     }
 
     function adjustFontSize(amount) {
