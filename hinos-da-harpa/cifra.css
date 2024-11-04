@@ -261,15 +261,6 @@ b {
   }
 }
 
-#scroll-container {
-  width: 400px;
-  height: 500px;
-  overflow: hidden;
-
-  position: relative;
-  margin-bottom: 20px;
-}
-
 #scroll-text {
   position: absolute;
   white-space: nowrap;
@@ -341,11 +332,12 @@ body {
 #scroll-container {
   margin: 100px 0px 0px 100px;
   padding: 10px;
-  height: auto;
+  height: 500px;
   width: 91%;
   overflow-y: auto;
   white-space: pre-wrap;
   font-size: 16px;
+  position: relative;
 }
 
 pre {
@@ -393,7 +385,7 @@ pre {
     flex-wrap: wrap;
     width: 100%;
     height: auto;
-    margin-top: 550px;
+    margin-top: 650px;
     border-right: none;
     border-bottom: none;
     position:absolute;
@@ -410,7 +402,7 @@ pre {
   }
 
   #scroll-container {
-    margin: 80px 0px 0px 0px;
+    margin: 100px 0px 0px 0px;
     overflow-y: auto;
     height: calc(150vh - 220px);
     padding-top: 5px;
@@ -426,7 +418,8 @@ pre {
   }
 
   #content {
-    margin-top: 100px;
+    margin-top: 200px;
+    
     
   }
 
@@ -434,5 +427,9 @@ pre {
     display: none;
     
 }
+scroll-reset{
+  display: none;
+}
+
 
 }
