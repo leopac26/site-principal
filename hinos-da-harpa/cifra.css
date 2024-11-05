@@ -385,6 +385,9 @@ pre {
     display: flex;
   
     }
+  #content{
+    margin: 0px auto 0px auto;
+  }
   }
 
   .control-button {
@@ -412,7 +415,8 @@ pre {
   }
 
   #content {
-    margin-top: 200px;
+    margin: 150px 0px 0px 90px;
+
     
     
   }
