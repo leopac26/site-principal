@@ -197,6 +197,7 @@ button {
 
 pre {
   font-size: 16px;
+  margin: 150px 10px 10px 5px;
 
 
 }
@@ -332,7 +333,7 @@ body {
 }
 
 pre {
-  margin: 150px 10px 10px 5px;
+  
 }
 
 .video-container {
@@ -348,6 +349,45 @@ pre {
 .video-container iframe {
   width: 100%;
   height: 100%;
+}
+
+.control-button {
+  flex: 1 1 30%;
+  padding: 1px 0px;
+  font-size: 10px;
+  text-align: center;
+  margin: 1px;
+}
+
+#scroll-container {
+  margin: 100px 0px 0px 0px;
+  overflow-y: auto;
+  height: calc(150vh - 220px);
+  padding-top: 5px;
+  width: 100%;
+}
+
+.video-container {
+  display: none;
+}
+
+.video-container iframe {
+  display: none;
+}
+
+#content {
+  margin: 150px 0px 0px 90px;
+
+  
+  
+}
+
+#scroll-toggle{
+  display: none;
+  
+}
+scroll-reset{
+display: none;
 }
 
 @media (max-width: 680px) {
@@ -390,44 +430,6 @@ pre {
   }
   }
 
-  .control-button {
-    flex: 1 1 30%;
-    padding: 1px 0px;
-    font-size: 10px;
-    text-align: center;
-    margin: 1px;
-  }
-
-  #scroll-container {
-    margin: 100px 0px 0px 0px;
-    overflow-y: auto;
-    height: calc(150vh - 220px);
-    padding-top: 5px;
-    width: 100%;
-  }
-
-  .video-container {
-    display: none;
-  }
-
-  .video-container iframe {
-    display: none;
-  }
-
-  #content {
-    margin: 150px 0px 0px 90px;
-
-    
-    
-  }
-
-  #scroll-toggle{
-    display: none;
-    
-}
-scroll-reset{
-  display: none;
-}
+  
 
 
-}
