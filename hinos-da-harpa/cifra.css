@@ -426,7 +426,11 @@ display: none;
   
     }
   #content{
-    margin: 0px auto 0px auto;
+    margin: 150px auto 0px auto;
+  }
+
+  #scroll-container{
+    top: -10px;
   }
   }
 
