@@ -125,7 +125,7 @@ ul li ul:focus{
     border: 1px solid black;
     background:#bbbbbb;
     color: white;
-    margin-top: 50px;
+    margin-top: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -147,17 +147,18 @@ ul li ul:focus{
   }
   
   .menu-tabela a {
-    color:white;
-    
-    
+    color:white; 
+    text-decoration: none;  
   }
-
+  .menu-tabela a:hover{
+    color: red;
+  }
 
   .titulo-menu{border: 1px solid blue;
     background: blue;
   color: rgb(250, 153, 9);
   margin: auto ;
-  font-size: 48px;
+  font-size: 35px;
   text-align: center;
   width: 100vw;
   justify-content: center;
