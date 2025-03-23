@@ -11,8 +11,7 @@
 <script src="videos.js" async>   </script>
 
 <body>
-  <h1 id="video-menu">Assembleia de Deus Shekinah Mistério Kadosh</h1>
-
+  
   <style>
 
     .titulo{
@@ -167,7 +166,6 @@
     
       </style>
     
-      <body>
         <h1 class="titulo-menu">Igreja Shekinah Ministério kadosh  </h1>
 
 <table class="menu-principal">
