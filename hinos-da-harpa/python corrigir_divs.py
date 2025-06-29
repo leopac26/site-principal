@@ -2,9 +2,9 @@ import os
 import re
 
 # Caminho da pasta onde estão os arquivos HTML
-pasta_alvo = 'D:/meus projetos de github/site-principal/hinos-da-harpa'  # Ajuste conforme o seu caso
+pasta_alvo = 'D:/meus projetos de github/site-principal/hinos-da-harpa'  # Ajuste conforme seu caminho
 
-# Novo conteúdo da div #controls
+# Novo conteúdo da div #controls com os botões
 novo_controls = '''
 <div id="controls">
   <div id="muda-cor" class="control-button">mudar fundo</div>
@@ -18,12 +18,8 @@ novo_controls = '''
 </div>
 '''
 
-# Expressão regular para capturar <div id="controls"> e os botões soltos
-regex_controls = re.compile(
-    r'<div id="controls">.*?</div>\s*'
-    r'(?:\s*<div[^>]*class="control-button"[^>]*>.*?</div>\s*)*',
-    re.DOTALL
-)
+# Expressão regular para localizar e substituir a div #controls com os botões corretos
+regex_controls = re.compile(r'<div id="controls">.*?</div>', re.DOTALL)
 
 # Percorre os arquivos da pasta
 for nome_arquivo in os.listdir(pasta_alvo):
@@ -33,7 +29,7 @@ for nome_arquivo in os.listdir(pasta_alvo):
         with open(caminho_arquivo, 'r', encoding='utf-8') as f:
             conteudo = f.read()
 
-        # Substitui o bloco antigo pelo novo bloco
+        # Substitui o conteúdo da div #controls pela nova versão com os botões
         novo_conteudo = re.sub(regex_controls, novo_controls, conteudo)
 
         with open(caminho_arquivo, 'w', encoding='utf-8') as f:
