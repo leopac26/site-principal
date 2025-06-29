@@ -11,7 +11,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const transposeDownButton = document.getElementById('transpose-down');
     const fontSizeUpButton = document.getElementById('font-size-up');
     const fontSizeDownButton = document.getElementById('font-size-down');
+    const mudarFundo = document.getElementById('muda-cor');
     const content = document.getElementById('content');
+    const bodyFundo = document.body;
 
     // Armazene o estado original das cifras
     const originalContent = content.innerHTML;
@@ -52,6 +54,16 @@ document.addEventListener('DOMContentLoaded', () => {
         scrollSpeed = 1;
         content.innerHTML = originalContent;
     });
+
+    mudarFundo.addEventListener('click',function(){
+        if(content.style.color === 'white'){
+          content.style.color = 'black';
+        }else{content.style.color = 'white'}
+
+        if(bodyFundo.style.backgroundColor === 'black'){
+          bodyFundo.style.backgroundColor = 'white';
+        }else{bodyFundo.style.backgroundColor = 'black'}
+      })
 
     transposeUpButton.addEventListener('click', () => {
         transposeChords(1); // Transpor para cima
@@ -105,10 +117,10 @@ document.addEventListener('DOMContentLoaded', () => {
         content.style.fontSize = (currentFontSize + amount) + 'px';
     }
 
-    let hideTimeout;
+    //let hideTimeout;
 
     // Função para mostrar os botões
-    function mostrarBotoes() {
+   /* function mostrarBotoes() {
         scrollToggleButton.style.display = 'block';
         scrollUpButton.style.display = 'block';
         scrollDownButton.style.display = 'block';
@@ -135,9 +147,9 @@ document.addEventListener('DOMContentLoaded', () => {
         transposeDownButton.style.display = 'none';
         fontSizeUpButton.style.display = 'none';
         fontSizeDownButton.style.display = 'none';
-    }
+    }*/
 
     // Detectar toque na tela em dispositivos móveis
-    document.addEventListener('touchstart', mostrarBotoes);
-    document.addEventListener('click', mostrarBotoes);
+    // document.addEventListener('touchstart', mostrarBotoes);
+    // document.addEventListener('click', mostrarBotoes);
 });
