@@ -1,130 +1,39 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="cifra.css">
-  <link rel="stylesheet" href="../meusite.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hino 01 Chuvas de Graça</title>
-  <style>
-    /* Seu CSS aqui */
-  </style>
-</head>
-<body>
-  <div class="video-container">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/EAcfvmA_xEE?si=qI7LTm0Tf_tnoodt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+import os
+import re
+
+# Caminho da pasta
+pasta = r'D:\meus projetos de github\site-principal\hinos-da-harpa'
+
+# Novo bloco completo que deve existir apenas uma vez
+novo_bloco = '''
   </div>
-
-  <h1 class="titulo-menu">Igreja Shekinah Ministério kadosh  </h1>
-
-<table class="menu-principal">
-<tr class="menu-tabela">
-<td><a href="../videos-youtube/videosyoutube.html"> videos</a></td>
-<td><a href="../louvores/index.html">louvores</a></td>
-<td><a href="../genesis/index.html">biblia sagrada </a></td>
-<td><a href="teclado virtual/teclado.html">Teclado Virtual </a></td>
-<td><a href="../hinos-da-harpa/index.html">hinos</a></td>
-<td><a href="../quiz-Biblico/quiz.html">quiz </a></td>
-<td><a href="">Playback </a></td>
-<td><a href="#"></a></td>
-</tr>
-
-</table>
-
-  <div id="controls">
-    
-</div>
-  <div id="scroll-down" class="control-button">+</div>
-  <div id="scroll-toggle" class="control-button">Play</div>
-  <div id="scroll-reset" class="control-button">Reset</div>
-  <div id="transpose-up" class="control-button">Transpose +</div>
-  <div id="transpose-down" class="control-button">Transpose -</div>
-  <div id="font-size-up" class="control-button">A+</div>
-  <div id="font-size-down" class="control-button">A-</div>
-  
-</div>
-
-
-  <div id="scroll-container">
-    <pre id="content">
-        001 - Chuvas de Graça
-        Harpa Cristã
-        Cifra: Principal (violão e guitarra)
-    [Intro] <b>Bb</b>  <b>Eb</b>  <b>Bb</b>  <b>Gm</b>  <b>F</b>
-<b>Bb</b>        <b>F</b>           <b>Bb</b>
-Deus prometeu com certeza
-<b>F</b>                 <b>Bb</b>  <b>Bb7</b>
-Chuvas de graça mandar
-<b>Eb</b>               <b>Bb/D</b> <b>Cm</b>
-Ele nos dá fortale___za
-<b>F4</b>       <b>F</b>           <b>Cm</b>   <b>F</b>
-E ricas bênçãos sem par
-
-<b>Bb</b>
-Chuvas de graça
-    <b>Gm</b>             <b>F</b>
-Chuvas pedimos, Senhor
-<b>Bb</b>          <b>Eb</b>        <b>Bb</b>
-Manda-nos chuvas constantes
-<b>F</b>               <b>Bb</b>
-Chuvas do Consolador
-
-<b>Bb</b>          <b>F</b>        <b>Bb</b>
-Cristo nos tem concedido
-<b>F</b>              <b>Bb</b>  <b>Bb7</b>
-O santo Consolador
-<b>Eb</b>                   <b>Bb/D</b>
-De plena paz nos enchido
-<b>Cm</b>                <b>F/A</b>
-Para o reinado do amor
-
-<b>Bb</b>
-Chuvas de graça
-    <b>Gm</b>             <b>F</b>
-Chuvas pedimos, Senhor
-<b>Bb</b>          <b>Eb</b>        <b>Bb</b>
-Manda-nos chuvas constantes
-<b>F</b>               <b>Bb</b>
-Chuvas do Consolador
-
-<b>Bb</b>          <b>F</b>         <b>Bb</b>
-Dá-nos, Senhor, amplamente
-<b>F</b>                   <b>Bb</b>  <b>Bb7</b>
-Teu grande gozo e poder
-<b>Eb</b>                 <b>Bb/D</b>  <b>Cm</b>
-Fonte de amor permanen___te
-<b>F4</b>          <b>F</b>        <b>Cm</b>   <b>F</b>
-Põe dentro de nosso ser
-
-<b>Bb</b>
-Chuvas de graça
-    <b>Gm</b>             <b>F</b>
-Chuvas pedimos, Senhor
-<b>Bb</b>          <b>Eb</b>        <b>Bb</b>
-Manda-nos chuvas constantes
-<b>F</b>               <b>Bb</b>
-Chuvas do Consolador
-
-<b>Bb</b>           <b>F</b>         <b>Bb</b>
-Faze os teus servos piedosos
-<b>F</b>                   <b>Bb</b>  <b>Bb7</b>
-Dá-lhes virtude e valor
-<b>Eb</b>                     <b>Bb</b>
-Dando os teus dons preciosos
-<b>Gm</b>             <b>F/A</b>
-Do santo Preceptor
-
-<b>Bb</b>
-Chuvas de graça
-    <b>Gm</b>             <b>F</b>
-Chuvas pedimos, Senhor
-<b>Bb</b>          <b>Eb</b>        <b>Bb</b>
-Manda-nos chuvas constantes
-<b>F</b>               <b>Bb</b>
-Chuvas do Consolador
-    </pre>
   </div>
+  </div>
+  </div>'''
 
-  <script src="cifra.js"></script>
-</body>
-</html>
+for nome_arquivo in os.listdir(pasta):
+    if nome_arquivo.endswith('.html'):
+        caminho_arquivo = os.path.join(pasta, nome_arquivo)
+
+        with open(caminho_arquivo, 'r', encoding='utf-8') as arquivo:
+            conteudo = arquivo.read()
+
+        # Remove todas as divs de botões duplicadas fora da #controls
+        conteudo = re.sub(
+            r'<div id="(scroll-down|scroll-toggle|scroll-reset|transpose-up|transpose-down|font-size-up|font-size-down)" class="control-button">.*?</div>\s*',
+            '',
+            conteudo
+        )
+
+        # Substitui o bloco de controles inteiro por um novo
+        conteudo = re.sub(
+            r'',
+            novo_bloco,
+            conteudo,
+            flags=re.DOTALL
+        )
+
+        with open(caminho_arquivo, 'w', encoding='utf-8') as arquivo:
+            arquivo.write(conteudo)
+
+        print(f'Corrigido: {nome_arquivo}')

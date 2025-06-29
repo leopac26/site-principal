@@ -2,7 +2,7 @@ import os
 import re
 
 # Caminho da pasta onde estão os arquivos HTML
-pasta_alvo = 'D:/meus projetos de github/site-principal/hinos-da-harpa'  # Ajuste conforme seu caminho
+pasta = r'D:/meus projetos de github/site-principal/hinos-da-harpa'  # Ajuste conforme seu caminho
 
 # Novo conteúdo da div #controls com os botões
 novo_controls = '''
