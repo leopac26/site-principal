@@ -1,5 +1,6 @@
 import os
 
+# Caminho para a pasta onde estão os arquivos HTML
 caminho_dos_arquivos = 'D:/meus projetos de github/site-principal/hinos-da-harpa'
 
 # HTML do botão
