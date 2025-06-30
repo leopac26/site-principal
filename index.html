@@ -1,132 +1,136 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
   <meta charset="UTF-8">
-  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>shekinah kadoshi</title>
-</head>
-<style>
-
-  body{
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-    url(logomarca.jpeg) no-repeat;
-    background-size: 100%;
-  
-  }
-
-h2{
-  margin: 100px 10px 10px 10px;
-  border: 1px solid rgb(78, 79, 93);
-  background:green;
-  width: 400px;
-  box-shadow: 5px 5px 30px greenyellow;
-  border-radius: 4%;
-  text-align: center;
-  font-size:30px;
-  color: white;
+  <style>
+    body {
+  background: linear-gradient(rgba(0, 0, 0, 0.007), rgba(0, 0, 0, 0.034)),
+    url("logomarca.jpeg") no-repeat center center;
+  background-size: 60% 50%; /* ← reduz o tamanho da imagem */
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
 }
 
-h3{font-size: 30px;
-color:blue;
-border: 1px solid rgb(78, 79, 93);
-  background:green;
-  width: 400px;}
 
-.logo{
-  background-image:url ("logomarca.jpeg");
-  
-}
-
-.titulo-menu{
-  margin-top: -100px;
-  border: 1px solid blue;
-    background: blue;
-  color: rgb(250, 153, 9);
-  font-size: 48px;
-  text-align: center;
-  width: 100vw;
-  justify-content: center;
-  position: fixed;
-  
-  }
-
-  .menu-principal{
-    width: 100%;
-      position: fixed;
-    border: 1px solid black;
-    background:blue;
-    color: white;
-    margin-top: -50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 40px;
+    h2, h3 {
+      text-align: center;
     }
 
+    h2 {
+      margin: 120px 0px 10px 0px;
+      border: 0px solid rgb(78, 79, 93);
+      background: rgba(0, 128, 0, 0.034);
+      width: 90%;
+      max-width: 400px;
+      box-shadow: 5px 5px 30px rgba(172, 255, 47, 0.116);
+      border-radius: 4%;
+      font-size: 30px;
+      color: rgb(0, 0, 0);
+      padding: 10px;
+    }
 
-  .menu-tabela{
-    width: 100vw;
-    background: rgb(46, 7, 241);
-    margin: 10px;
-    
-  }
+    h3 {
+      font-size: 26px;
+      color: blue;
+      border: 0px solid rgb(78, 79, 93);
+      background: rgba(0, 128, 0, 0.178);
+      width: 90%;
+      max-width: 400px;
+      margin: 10px 0px;
+      padding: 10px;
+      color: rgb(3, 0, 0);
+    }
 
-  .menu-tabela a {
-    color:white;
-  margin: 5px;}
+    .titulo-menu {
+      margin-top: 0;
+      border: 1px solid blue;
+      background: blue;
+      color: rgb(250, 153, 9);
+      font-size: 48px;
+      text-align: center;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      z-index: 999;
+      padding: 10px;
+    }
 
-  @media(max-width:670px){
-    .titulo-menu{width: 100%;
-    font-size: 25px;}
+    .menu-principal {
+      width: 100%;
+      position: fixed;
+      top: 70px;
+      border: 1px solid black;
+      background: blue;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+      z-index: 998;
+    }
 
-    .menu-principal{width: 100%;
-    font-size: 16px;
-  top: 80px;}
-  .menu-tabela{
-    margin: 1px;
-  }
-  }
+    .menu-tabela {
+      width: 100%;
+      background: rgb(46, 7, 241);
+    }
 
+    .menu-tabela a {
+      color: white;
+      margin: 5px;
+      text-decoration: none;
+      padding: 8px;
+      display: inline-block;
+    }
 
+    @media(max-width: 670px) {
+      .titulo-menu {
+        font-size: 25px;
+        padding: 10px 0;
+      }
 
+      .menu-principal {
+        font-size: 14px;
+        top: 70px;
+        flex-wrap: wrap;
+      }
 
+      .menu-tabela a {
+        display: block;
+        margin: 5px auto;
+        text-align: center;
+      }
 
-</style>
-
+      h2, h3 {
+        font-size: 20px;
+        width: 95%;
+      }
+    }
+  </style>
+</head>
 <body>
-  
+  <h1 class="titulo-menu">Igreja Shekinah Ministério Kadosh</h1>
 
-   <h1 class="titulo-menu">Igreja Shekinah Ministério kadosh  </h1>
+  <table class="menu-principal">
+    <tr class="menu-tabela">
+      
+      <td><a href="louvores/index.html">Louvores</a></td>
+      <td><a href="genesis/index.html">Bíblia Sagrada</a></td>
+      <td><a href="corinhos/corinhos.html">Corinhos</a></td>
+      <td><a href="teclado virtual/teclado.html">Teclado Virtual</a></td>
+      <td><a href="hinos-da-harpa/index.html">Hinos</a></td>
+      <td><a href="quiz-Biblico/quiz.html">Quiz</a></td>
+      <td><a href="#">Playback</a></td>
+    </tr>
+  </table>
 
-<table class="menu-principal">
-<tr class="menu-tabela">
-<td><a href="videos-youtube/videosyoutube.html"> videos</a></td>
-<td><a href="louvores/index.html">louvores</a></td>
-<td><a href="genesis/index.html">biblia sagrada </a></td>
-<td><a href="corinhos/corinhos.html">corinhos</a></td>
-<td><a href="teclado virtual/teclado.html">Teclado Virtual </a></td>
-<td><a href="hinos-da-harpa/index.html">hinos</a></td>
-<td><a href="#">  </a></td>
-<td><a href="quiz-Biblico/quiz.html">quiz </a></td>
-<td><a href="">Playback </a></td>
-<td><a href="#"></a></td>
-</tr>
+  <h2>Dias de cultos <br>Das 19:30 Hrs<br>Quarta-feira</h2>
+  <h3>Bairro São José<br> número 189</h3>
 
-</table>
-<h2>
-Dias de cultos <br>
- Das 19:30 Hrs
-Terça-feira </h2><h3> Bairro São josé número 189</h3>
-
-<h2>Quinta-feira e
-
-Domingo <br>
-das 19:30 hrs</h2> <h3>antônio cardoso 245 <br>Manoel alves de queiroz</h3>
-
-
-
+  <h2>Terça-feira <br>Quinta-feira<br> e <br> Domingo <br>Das 19:30 hrs</h2>
+  <h3>Antônio Cardoso, 245<br>Manoel Alves de Queiroz</h3>
 </body>
-
 </html>

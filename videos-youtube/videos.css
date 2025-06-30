@@ -1,108 +1,140 @@
-
-  body{
-background: url(I\ Declare\ World\ Peace.jpg);
-background-repeat: no-repeat;
-background-size: 100% 100% ;
-display: flex;}
-
-.logomarca{
-  margin: 0px -80px 0px 0px;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  position: absolute;
+/* Background e layout geral */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: url('I Declare World Peace.jpg') no-repeat center center fixed;
+  background-size: 100% 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-#video-menu{
-  color: rgb(116, 180, 180);
+.titulo-menu {
+  background: blue;
+  color: white;
+  font-size: 28px;
   text-align: center;
-  top: 30px;
-  position: absolute;
-  text-indent: 30px;
-  padding-left: 400px;
-  font-size: 30pt;
-  font-style: border;
-font-family: cursive;}
-  
-  
-.central{
-  margin: 100px 0px 0px 0px;}  
-
-.snippet-ytb-lazy{width: 250px;
-aspect-ratio: 16/9;
-background-color: mediumturquoise;
-border-radius: 10px;
-overflow: hidden;
-padding: 0px;
-left: 0px;
-margin: 25px;
-opacity: 0.8;
+  padding: 20px;
+  margin: 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
 }
 
-.snippet-ytb-lazy .player{display: flex;
-align-items: center;
-justify-content: center;
-cursor: pointer;}
-
-.snippet-ytb-lazy img{
-  position: absolute;
-  width: 250px;
-  height: 180px;
-top: 0;
-left: 0;}
-
-.snippet-ytb-lazy svg{
-  width: 10px;
-  line-height: 0;
-  z-index: 1;
-  padding: 2px;
-  background-color:#fff;
-  border-radius: 50%;
+.menu-principal {
+  margin-top: 70px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background: #007bff;
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  top: 70px;
+  z-index: 999;
 }
 
-.snippet-ytb-lazy .player, .snippet-ytb-lazy iframe{position: relative;
-width: 250px;
-height:250px;
-background-color: inherit;
-}
-h2{
-  color:blue;
-  position: absolute;
-  top: 40px;
-  background: rgba(255, 255, 255, 0.692);
+.menu-principal td {
+  padding: 10px;
 }
 
-@media(max-width:1200px){
-body{background-size: 100% 200% ;}
+.menu-principal a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 5px 10px;
+}
 
+.menu-principal a:hover {
+  background-color: white;
+  color: #007bff;
+  border-radius: 5px;
+}
 
-  .video-menu{font-size: 1.1rem;
-    text-indent: .1rem;
-    padding-left: 130px;
-   }
-   .snippet-ytb-lazy{
-    width: 80px;
-    
-   }
+/* Contêiner que engloba os vídeos - agora com 3 colunas lado a lado */
+.central {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 colunas, ou seja, 3 vídeos por linha */
+  gap: 20px; /* Espaçamento entre as células */
+  margin-top: 150px; /* Ajuste o topo conforme necessário */
+  width: 90%; /* Garante que a largura não ocupe a tela toda */
+  justify-items: center; /* Centraliza o conteúdo nas células */
+}
 
-   .snippet-ytb-lazy img{width: 80px;
-  height: 50px;}
+/* Estilo para cada player de vídeo */
+.player {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 100%; /* Certifica-se de que o player ocupa toda a célula */
+  max-width: 300px; /* Define o tamanho máximo para cada player */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-  .snippet-ytb-lazy .player, .snippet-ytb-lazy iframe{
-    width: 80px;
-    height:60px;
-    }
-    .central{
-      width: 100px;
-      height: 200px;     
-    }
-    .logomarca{
-      width: 40px;
-      height: 30px;
+/* Estilo da imagem dentro do player */
+.player img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  max-width: 100%; /* Garante que a imagem se ajuste */
+}
+
+/* Estilo para o título do vídeo */
+.player h2 {
+  font-size: 18px;
+  margin-top: 10px;
+  color: #333;
+}
+
+/* Estilo para o ícone do play (SVG) */
+.player svg {
+  width: 60px;
+  height: 60px;
+  margin-top: 10px;
+  fill: #0f88ee;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 1200px) {
+  .central {
+    grid-template-columns: repeat(2, 1fr); /* 2 vídeos por linha em telas menores */
   }
 }
 
+@media (max-width: 670px) {
+  .titulo-menu {
+    font-size: 20px;
+    padding: 10px;
+  }
 
+  .menu-principal {
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+  }
 
-  
-  
+  .menu-principal a {
+    font-size: 14px;
+    padding: 5px;
+  }
+
+  .central {
+    grid-template-columns: 1fr; /* 1 vídeo por linha em dispositivos muito pequenos */
+    gap: 10px;
+  }
+
+  .player {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .player h2 {
+    font-size: 18px;
+  }
+}
