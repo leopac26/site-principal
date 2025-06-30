@@ -1,10 +1,11 @@
 import os
 
 # Caminho da pasta onde estão os arquivos HTML
-pasta = r'D:/meus projetos de github/site-principal/hinos-da-harpa'
+pasta = r'D:/meus projetos de github/site-principal/genesis'
 
 # Frase ou trecho exato que você quer remover
-trecho_para_remover = '<td><a href="../videos-youtube/videosyoutube.html"> videos</a></td>'
+trecho_para_remover = '<li><a href="../videos-youtube/videosyoutube.html">videos</a>'
+
 
 # Loop por todos os arquivos da pasta
 for nome_arquivo in os.listdir(pasta):
