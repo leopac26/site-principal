@@ -114,6 +114,7 @@ ul.ordem-principal li ul:focus {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+  height: 400px;
 }
 
 
@@ -318,14 +319,17 @@ body {
 }
 
 .control-button {
-  padding: 4px 5px;
   background-color: #007bff;
   color: white;
-  font-size: 14px;
   border: none;
   border-radius: 6px;
   cursor: pointer;
   min-width: 50px;
+   flex: 1 1 30%;
+  padding: 1px 0px;
+  font-size: 15px;
+  text-align: center;
+  margin: 1px;
 }
 
 #scroll-container {
@@ -340,11 +344,6 @@ body {
   scroll-behavior: smooth;
 }
 
-
-
-pre {
-  
-}
 
 .video-container {
   position: fixed;
@@ -362,11 +361,7 @@ pre {
 }
 
 .control-button {
-  flex: 1 1 30%;
-  padding: 1px 0px;
-  font-size: 10px;
-  text-align: center;
-  margin: 1px;
+ 
 }
 
 #scroll-container {
@@ -386,7 +381,7 @@ pre {
 }
 
 #content {
-  padding-left: 90px;
+  padding-left: 150px;
 }
 
 
