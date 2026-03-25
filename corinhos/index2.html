@@ -17,44 +17,54 @@
 
 <body>
   
-  <h1 class="titulo-menu">Shekinah Kadosh Hinos da Harpa Cristã</h1>
-
-
-  <table class="menu-principal">
-<tr class="menu-tabela">
-<td><a href="../louvores/index.html">louvores</a></td>
-<td><a href="../genesis/index.html">biblia sagrada </a></td>
-<td><a href="../teclado virtual/teclado.html">Teclado Virtual </a></td>
-<td><a href="../hinos-da-harpa/index.html">hinos</a></td>
-<td><a href="../quiz-Biblico/quiz.html">quiz </a></td>
-<td><a href="">Playback </a></td>
-
-</tr>
-
-</table>
-
-
-    <div id="controls">
-        <button class="botao" onclick="rolar(1)">rolagem</button>
-        <button class="botao" onclick="rolar()">Pause</button>
-      
-        <button onclick="transposicaoBotao(1)">+ 1/2 </button>
-        <button onclick="transposicaoBotao(-1)">- 1/2 </button>
-        <Button onclick="reset()">reset</Button>
-      
-      </div>
-
- <div class="row">
-    <div class="col musicas">
+    <div class="menus">
+        <ul class="ordem-3">
+            <li><a href="../index.html">hino
+                <ul>
+                
+                    <li><a href="#"></a></li>
+                </ul>
+            </li>
+            <li><a href="../../genesis/index.html">biblia sagrada</a>
+                <ul>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                </ul>
+            </li>
+            <li><a href="#">videos</a>
+                <ul>
+                    <li><a href="../../videos-youtube/videosyoutube.html">louvores</a></li>
+                    <li><a href="../videos-youtube/videosyoutube.html">videos</a></li>../
+                </ul>
+            </li>
+            <li><a href="../meusite.html">shekinah kadoshi</a>
+                <ul>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                </ul>
+            </li>
         
-<p data-arquivo="Hino 01 - chuvas de Graça" onclick="abrirMusica(event)"></p>
-       
-        
+        </ul>
     </div>
 
- <div class="row">
- <div id="resultado">
-<pre>
+
+   <div id="controls">
+    <div id="scroll-up" class="control-button">-</div>
+    <div id="scroll-down" class="control-button">+</div>
+    <div id="scroll-toggle" class="control-button">Play</div>
+    <div id="scroll-reset" class="control-button">Reset</div>
+    <div id="transpose-up" class="control-button">Transpose +</div>
+    <div id="transpose-down" class="control-button">Transpose -</div>
+    <div id="font-size-up" class="control-button">A+</div>
+    <div id="font-size-down" class="control-button">A-</div>
+  </div>
+       
+        
+    
+
+ <div id="scroll-container">
+      <pre id="content">
+
   001 - Chuvas de Graça
   Harpa Cristã
   Cifra: Principal (violão e guitarra)
@@ -134,3 +144,4 @@
             G/B = X 2 0 0 3 3
 
         </pre>
+ </div>

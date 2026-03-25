@@ -1,9 +1,8 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<link rel="stylesheet" href="../genesis/genesis.css">
+<head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="../meusite.css">
-  <link rel="stylesheet" href="../hinos-da-harpa/cifra.css">
+  <link rel="stylesheet" href="cifra.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hino 01 Chuvas de Graça</title>
   <style>
@@ -136,122 +135,74 @@ font-weight: bold;
 display: block;}
 
 
-.snippet-ytb-lazy {
-position: absolute;
-width: 350px;
-height: 280px;
-background-color: black;
-top: 100px;
-left:800px;
-color: white;
-z-index: 0;
-}
+      .snippet-ytb-lazy {
+        position: absolute;
+        width: 350px;
+        height: 280px;
+        background-color: black;
+        top: 100px;
+        left: 800px;
+        color: white;
+        z-index: 0;
+      }
+
+      .snippet-ytb-lazy .player {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+      }
+
+      .snippet-ytb-lazy .player img {
+        border-radius: 50%;
+      }
+
+      .snippet-ytb-lazy .player,
+      .snippet-ytb-lazy iframe {
+        position: relative;
+        width: 350px;
+        height: 280px;
+        background-color: inherit;
+      }
 
 
-.snippet-ytb-lazy .player{display: flex;
-align-items: center;
-justify-content: center;
-cursor: pointer;}
+      @media (max-width: 680px) {
+        .titulo {
+          font-size: 18pt;
+        }
 
-.snippet-ytb-lazy .player img{
-    border-radius: 50%;
-}
+        ul.ordem-principal li a {
+          font-size: 13px;
+        }
 
+        #controls {
+          display: flex;
+          width: 100%;
+          height: 25px;
+          margin: -40px auto 0px auto;
+        }
 
-.snippet-ytb-lazy .player, .snippet-ytb-lazy iframe{position: relative;
-width: 350px;
-height:280px;
-background-color: inherit;
-}
+        button {
+          margin: 0px 2px auto 2px;
+          height: 25px;
+        }
 
+        #resultado {
+          margin: 100px 0px;
+          width: 80%;
+        }
+        #resultado pre {
+          font-size: 13px;
+          width: 100%;
+        }
 
+        .snippet-ytb-lazy {
+          display: none;
+        }
 
-.row1{
-    margin: 800px auto;
-    border: 1px solid black;}
-    
-    
-    
-    
-.container{
-    overflow: scroll;
-    border: 2px solid black;
-}
-
-
-
-#resultado{
-
-margin: 100px 70px;
-overflow: scroll;
-    border: 2px solid black;
-}
-
-
-
-
-
-
-#resultado .hino{
-    font-size: 40px;
-    
-    
-            }
-
-
- #resultado pre{
-    font-size: 20px;
-
-   
- }
-
-
-
-#resultado pre b{
-    color: blue;
-    font-size: 20px;    
-}
-
-@media(max-width:680px){
-    .titulo{ 
-    font-size:18pt;}
-
-    ul.ordem-principal li a{
-        font-size: 13px;
-    }
-
-
-#controls{
-    display: flex;
-    width: 100%;
-    height: 25px;
-    margin: -40px auto 0px auto;
-
-}
-
-button{
-    margin: 0px 2px auto 2px;
-    height: 25px;
-    
-}
-
-#resultado{
-   margin: 100px 0px ;
-   width: 80%;
-}
-#resultado  pre{
-    font-size: 13px;
-    width: 100%;
-}
-
-.snippet-ytb-lazy{
-    display: none;
-}
-
-.snippet-ytb-lazy .player{
-    display: none;
-
-}
+        .snippet-ytb-lazy .player {
+          display: none;
+        }
 
 .snippet-ytb-lazy .player img{
     display: none;
@@ -259,6 +210,14 @@ button{
 .snippet-ytb-lazy .player, .snippet-ytb-lazy iframe{
     display: none;
 }
+}
+#scroll-container {
+    width: 400px;
+    height: 500px;
+    overflow: hidden;
+    
+    position: relative;
+    margin-bottom: 20px;
 }
 
 #scroll-text {
@@ -326,29 +285,56 @@ button{
         text-align: center;
       }
   
-     
+      #scroll-container {
+        margin: 10px 0px 0px 100px;
+        padding: 10px;
+        height: auto;
+        width: 91%;
+        overflow-y: auto;
+        white-space: pre-wrap;
+        font-size: 16px;
+      }
+  
+      pre {
+        margin: 50px 10px 10px 5px;
+      }
+  
+      .video-container {
+        position: fixed;
+        top: 70px;
+        right: 20px;
+        z-index: 1000;
+        width: 100%;
+        max-width: 560px;
+        height: 315px;
+      }
+  
+      .video-container iframe {
+        width: 100%;
+        height: 100%;
+      }
   
       @media (max-width: 680px) {
         .titulo {
           font-size: 20px;
           text-align: center;
         }
-  
+
         .ordem-principal {
           flex-direction: row;
           justify-content: space-around;
           padding: 2px 0;
         }
-  
+
         .ordem-principal li {
           width: auto;
           text-align: center;
         }
-  
+
         .ordem-principal ul {
           display: none;
         }
-  
+
         #controls {
           flex-direction: row;
           flex-wrap: wrap;
@@ -361,7 +347,7 @@ button{
           justify-content: space-around;
           padding: 10px 0;
         }
-  
+
         .control-button {
           flex: 1 1 30%;
           padding: 10px 5px;
@@ -369,13 +355,13 @@ button{
           text-align: center;
           margin: 5px;
         }
-  
+
         #scroll-container {
           margin-left: 0;
           height: calc(100vh - 220px);
           padding-top: 10px;
         }
-  
+
         .video-container {
           width: 100%;
           display: flex;
@@ -384,49 +370,59 @@ button{
           position: static;
           max-width: 100%;
         }
-  
+
         .video-container iframe {
           width: 100%;
           max-width: 100%;
           height: auto;
         }
       }
-  </style>
-</head>
-<body>
-  <div class="video-container">
+    </style>
+  </head>
+  <body>
+    <div class="video-container">
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/FryRjYAu0-s?si=M9roOyEVyA1_QsgY"
+        title="YouTube video player"
+        frameborder="0"
+        allow="
+          accelerometer;
+          autoplay;
+          clipboard-write;
+          encrypted-media;
+          gyroscope;
+          picture-in-picture;
+          web-share;
+        "
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+    </div>
 
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/FryRjYAu0-s?si=M9roOyEVyA1_QsgY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-  </div>
-
-  <h1 class="titulo-menu">Shekinah Kadosh Hinos da Harpa Cristã</h1>
+  <h1 class="titulo">Shekinah Kadosh Hinos da Harpa Cristã</h1>
   
- <table class="menu-principal">
-<tr class="menu-tabela">
-<td><a href="../louvores/index.html">louvores</a></td>
-<td><a href="../genesis/index.html">biblia sagrada </a></td>
-<td><a href="../teclado virtual/teclado.html">Teclado Virtual </a></td>
-<td><a href="../hinos-da-harpa/index.html">hinos</a></td>
-<td><a href="../quiz-Biblico/quiz.html">quiz </a></td>
-<td><a href="">Playback </a></td>
+  <ul class="ordem-principal">
+    <li><a href="../hinos-da-harpa/index.html">Hino</a></li>
+    <li><a href="../genesis/index.html">Bíblia Sagrada</a></li>
+    <li><a href="../videos-youtube/videosyoutube.html">Vídeos</a></li>
+    <li><a href="meusite.html">Shekinah Kadoshi</a></li>
+  </ul>
 
-</tr>
+    <div id="controls">
+      <div id="scroll-up" class="control-button">-</div>
+      <div id="scroll-down" class="control-button">+</div>
+      <div id="scroll-toggle" class="control-button">Play</div>
+      <div id="scroll-reset" class="control-button">Reset</div>
+      <div id="transpose-up" class="control-button">Transpose +</div>
+      <div id="transpose-down" class="control-button">Transpose -</div>
+      <div id="font-size-up" class="control-button">A+</div>
+      <div id="font-size-down" class="control-button">A-</div>
+    </div>
 
-</table>
-
-  <div id="controls">
-    <div id="scroll-up" class="control-button">-</div>
-    <div id="scroll-down" class="control-button">+</div>
-    <div id="scroll-toggle" class="control-button">Play</div>
-    <div id="scroll-reset" class="control-button">Reset</div>
-    <div id="transpose-up" class="control-button">Transpose +</div>
-    <div id="transpose-down" class="control-button">Transpose -</div>
-    <div id="font-size-up" class="control-button">A+</div>
-    <div id="font-size-down" class="control-button">A-</div>
-  </div>
-
-  <div id="scroll-container">
-    <pre id="content">
+    <div id="scroll-container">
+      <pre id="content">
 
                   <b>G</b>        <b>D</b>
             Em Espírito, em verdade
@@ -458,107 +454,127 @@ button{
                   <b>B</b>          <b>Em</b>    <b>D</b>       <b>C</b>
             Meu prazer  é viver na casa de Deus
                   <b>D</b>      <b>G</b>
-            Onde flui o amor</pre>
-  </div>
+            Onde flui o amor</pre
+      >
+    </div>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      let isScrolling = false;
-      let scrollSpeed = 1;
-      let scrollInterval;
-      const scrollContainer = document.getElementById('scroll-container');
-      const scrollUpButton = document.getElementById('scroll-up');
-      const scrollDownButton = document.getElementById('scroll-down');
-      const scrollToggleButton = document.getElementById('scroll-toggle');
-      const scrollResetButton = document.getElementById('scroll-reset');
-      const transposeUpButton = document.getElementById('transpose-up');
-      const transposeDownButton = document.getElementById('transpose-down');
-      const fontSizeUpButton = document.getElementById('font-size-up');
-      const fontSizeDownButton = document.getElementById('font-size-down');
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        let isScrolling = false;
+        let scrollSpeed = 1;
+        let scrollInterval;
+        const scrollContainer = document.getElementById("scroll-container");
+        const scrollUpButton = document.getElementById("scroll-up");
+        const scrollDownButton = document.getElementById("scroll-down");
+        const scrollToggleButton = document.getElementById("scroll-toggle");
+        const scrollResetButton = document.getElementById("scroll-reset");
+        const transposeUpButton = document.getElementById("transpose-up");
+        const transposeDownButton = document.getElementById("transpose-down");
+        const fontSizeUpButton = document.getElementById("font-size-up");
+        const fontSizeDownButton = document.getElementById("font-size-down");
 
-      function startScrolling() {
-        if (!isScrolling) {
-          scrollInterval = setInterval(() => {
-            scrollContainer.scrollBy(0, scrollSpeed);
-          }, 200);
-          isScrolling = true;
-          scrollToggleButton.textContent = 'Pause';
+        function startScrolling() {
+          if (!isScrolling) {
+            scrollInterval = setInterval(() => {
+              scrollContainer.scrollBy(0, scrollSpeed);
+            }, 200);
+            isScrolling = true;
+            scrollToggleButton.textContent = "Pause";
+          }
         }
-      }
 
-      function stopScrolling() {
-        if (isScrolling) {
-          clearInterval(scrollInterval);
-          isScrolling = false;
-          scrollToggleButton.textContent = 'Play';
+        function stopScrolling() {
+          if (isScrolling) {
+            clearInterval(scrollInterval);
+            isScrolling = false;
+            scrollToggleButton.textContent = "Play";
+          }
         }
-      }
 
-      scrollUpButton.addEventListener('click', () => {
-        scrollSpeed = Math.max(scrollSpeed - 1, 1);
-      });
+        scrollUpButton.addEventListener("click", () => {
+          scrollSpeed = Math.max(scrollSpeed - 1, 1);
+        });
 
-      scrollDownButton.addEventListener('click', () => {
-        scrollSpeed += 1;
-      });
+        scrollDownButton.addEventListener("click", () => {
+          scrollSpeed += 1;
+        });
 
-      scrollToggleButton.addEventListener('click', () => {
-        if (isScrolling) {
+        scrollToggleButton.addEventListener("click", () => {
+          if (isScrolling) {
+            stopScrolling();
+          } else {
+            startScrolling();
+          }
+        });
+
+        scrollResetButton.addEventListener("click", () => {
+          scrollContainer.scrollTo(0, 0);
           stopScrolling();
-        } else {
-          startScrolling();
+          scrollSpeed = 1;
+        });
+
+        transposeUpButton.addEventListener("click", () => {
+          transposeChords(1);
+        });
+
+        transposeDownButton.addEventListener("click", () => {
+          transposeChords(-1);
+        });
+
+        fontSizeUpButton.addEventListener("click", () => {
+          adjustFontSize(1);
+        });
+
+        fontSizeDownButton.addEventListener("click", () => {
+          adjustFontSize(-1);
+        });
+
+        function transposeChords(semitones) {
+          const chordElements = content.querySelectorAll("b");
+          chordElements.forEach((chordElement) => {
+            chordElement.textContent = transposeChord(
+              chordElement.textContent,
+              semitones,
+            );
+          });
+        }
+
+        function transposeChord(chord, semitones) {
+          const notes = [
+            "A",
+            "A#",
+            "B",
+            "C",
+            "C#",
+            "D",
+            "D#",
+            "E",
+            "F",
+            "F#",
+            "G",
+            "G#",
+          ];
+          const chordParts = chord.split("/");
+          const transposedChord = chordParts.map((part) => {
+            const noteMatch = part.match(/[A-G][#b]?/);
+            if (!noteMatch) return part;
+            const note = noteMatch[0];
+            const noteIndex = notes.indexOf(note);
+            if (noteIndex === -1) return part;
+            const newIndex =
+              (noteIndex + semitones + notes.length) % notes.length;
+            return part.replace(note, notes[newIndex]);
+          });
+          return transposedChord.join("/");
+        }
+
+        function adjustFontSize(change) {
+          const currentSize = parseFloat(
+            window.getComputedStyle(content).fontSize,
+          );
+          content.style.fontSize = `${currentSize + change}px`;
         }
       });
-
-      scrollResetButton.addEventListener('click', () => {
-        scrollContainer.scrollTo(0, 0);
-        stopScrolling();
-        scrollSpeed = 1;
-      });
-
-      transposeUpButton.addEventListener('click', () => {
-        transposeChords(1);
-      });
-
-      transposeDownButton.addEventListener('click', () => {
-        transposeChords(-1);
-      });
-
-      fontSizeUpButton.addEventListener('click', () => {
-        adjustFontSize(1);
-      });
-
-      fontSizeDownButton.addEventListener('click', () => {
-        adjustFontSize(-1);
-      });
-
-      function transposeChords(semitones) {
-        const chordElements = content.querySelectorAll('b');
-        chordElements.forEach(chordElement => {
-          chordElement.textContent = transposeChord(chordElement.textContent, semitones);
-        });
-      }
-
-      function transposeChord(chord, semitones) {
-        const notes = ['A', 'A#', 'B', 'C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#'];
-        const chordParts = chord.split('/');
-        const transposedChord = chordParts.map(part => {
-          const noteMatch = part.match(/[A-G][#b]?/);
-          if (!noteMatch) return part;
-          const note = noteMatch[0];
-          const noteIndex = notes.indexOf(note);
-          if (noteIndex === -1) return part;
-          const newIndex = (noteIndex + semitones + notes.length) % notes.length;
-          return part.replace(note, notes[newIndex]);
-        });
-        return transposedChord.join('/');
-      }
-
-      function adjustFontSize(change) {
-        const currentSize = parseFloat(window.getComputedStyle(content).fontSize);
-        content.style.fontSize = `${currentSize + change}px`;
-      }
-    });
-  </script>
-</body>
+    </script>
+  </body>
 </html>
