@@ -119,7 +119,7 @@ ul.ordem-principal li ul:focus {
 
 
 
-
+.botao {}
 
 button {
   padding: 1px;
@@ -215,21 +215,6 @@ b {
   color: blue;
   font-size: 16px;
 }
-
-.video-container {
-        position: fixed;
-        top: 70px;
-        right: 20px;
-        z-index: 1000;
-        width: 100%;
-        max-width: 560px;
-        height: 315px;
-      }
-  
-      .video-container iframe {
-        width: 100%;
-        height: 100%;
-      }
 
 @media(max-width:680px) {
   .titulo {
@@ -362,9 +347,8 @@ body {
 
 
 
-pre {
-  
-}
+ 
+
 
 .video-container {
         position: fixed;
@@ -382,27 +366,22 @@ pre {
       }
 
 .control-button {
-  flex: 1 1 30%;
-  padding: 1px 0px;
-  font-size: 10px;
-  text-align: center;
-  margin: 1px;
-}
-
-#scroll-container {
-  margin: 100px 0px 0px 0px;
-  overflow-y: auto;
-  height: calc(150vh - 220px);
-  padding-top: 5px;
-  width: 100%;
+ 
 }
 
 
 
+.video-container {
+  display: none;
+}
 
+.video-container iframe {
+  display: none;
+}
 
 #content {
-  padding-left: 90px;
+  margin: 100px 0px 0px 100px;
+  padding-left: 100px;
 }
 
 
