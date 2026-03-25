@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
+<link rel="stylesheet" href="../genesis/genesis.css">
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="cifra.css">
+  <link rel="stylesheet" href="../meusite.css">
+  <link rel="stylesheet" href="../hinos-da-harpa/cifra.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hino 01 Chuvas de Graça</title>
   <style>
@@ -10,27 +11,6 @@
     margin: 0px;
     padding: 0px;
 }
-
-
-
-.titulo{
-text-align: center;    
-background: blue;
-color: white;
-position: fixed;
-width: 100%;
-height: 38px;
-top: -12px;
-padding: 5px;
-font-size: 25pt;
-border: 1px solid rgb(3, 212, 20);
-z-index: 1;
-text-align: center;
-margin-bottom: 10px;
-font-size: 24px;
-
-}
-
 
 
 ul.ordem-principal{
@@ -259,14 +239,6 @@ button{
     display: none;
 }
 }
-#scroll-container {
-    width: 400px;
-    height: 500px;
-    overflow: hidden;
-    
-    position: relative;
-    margin-bottom: 20px;
-}
 
 #scroll-text {
     position: absolute;
@@ -333,34 +305,12 @@ button{
         text-align: center;
       }
   
-      #scroll-container {
-        margin: 10px 0px 0px 100px;
-        padding: 10px;
-        height: auto;
-        width: 91%;
-        overflow-y: auto;
-        white-space: pre-wrap;
-        font-size: 16px;
-      }
   
       pre {
         margin: 50px 10px 10px 5px;
       }
   
-      .video-container {
-        position: fixed;
-        top: 70px;
-        right: 20px;
-        z-index: 1000;
-        width: 100%;
-        max-width: 560px;
-        height: 315px;
-      }
-  
-      .video-container iframe {
-        width: 100%;
-        height: 100%;
-      }
+    
   
       @media (max-width: 680px) {
         .titulo {
@@ -433,14 +383,16 @@ button{
     <iframe width="560" height="315" src="https://www.youtube.com/embed/FryRjYAu0-s?si=M9roOyEVyA1_QsgY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   </div>
 
-  <h1 class="titulo">Shekinah Kadosh Hinos da Harpa Cristã</h1>
+  <h1 class="titulo-menu">Shekinah Kadosh Hinos da Harpa Cristã</h1>
   
-  <ul class="ordem-principal">
-    <li><a href="../hinos-da-harpa/index.html">Hino</a></li>
-    <li><a href="../genesis/index.html">Bíblia Sagrada</a></li>
-    <li><a href="../videos-youtube/videosyoutube.html">Vídeos</a></li>
-    <li><a href="meusite.html">Shekinah Kadoshi</a></li>
-  </ul>
+  <table class="menu-principal">
+<tr class="menu-tabela">
+<td><a href="../louvores/index.html">louvores</a></td>
+<td><a href="../genesis/index.html">biblia sagrada </a></td>
+<td><a href="../teclado virtual/teclado.html">Teclado Virtual </a></td>
+<td><a href="../hinos-da-harpa/index.html">hinos</a></td>
+<td><a href="../quiz-Biblico/quiz.html">quiz </a></td>
+<td><a href="">Playback </a></td>
 
   <div id="controls">
     <div id="scroll-up" class="control-button">-</div>

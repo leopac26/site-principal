@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
+<link rel="stylesheet" href="../genesis/genesis.css">
   <meta charset="UTF-8">
   <link rel="stylesheet" href="cifra.css">
   <link rel="stylesheet" href="">
@@ -40,50 +40,6 @@ li {
 
 
 
-    .menu-principal{
-      position: fixed;
-    border: 1px solid black;
-    background:#bbbbbb;
-    color: white;
-    margin-top: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 20px;
-    
-  }
-  .menu-tabela{
-    margin-top:20px;
-    background: rgb(46, 7, 241);
-    
-  }
-
-  td{
-    margin: 0px;
-    padding: 10px 0px;
-    width: 300px;
-    text-align: center;
-
-  }
-  
-  .menu-tabela a {
-    color:white;
-    
-    
-  }
-
-
-  .titulo-menu{border: 1px solid blue;
-    background: blue;
-  color: rgb(250, 153, 9);
-  margin: auto;
-  font-size: 48px;
-  text-align: center;
-  width: 100vw;
-  justify-content: center;
-  position: fixed;
-  }
-
   #searchInput{
     width: 100px;
     height: 60px;
@@ -95,8 +51,9 @@ li {
   #searchButton{
     margin: 100px 0px 0px 112px;
     position: absolute;
-    height: 25px;
-
+    height: 30px;
+    padding: 5px;
+    width:80px ;
   }
   
 
@@ -836,26 +793,6 @@ document.getElementById('muda-cor').addEventListener('click', () => {
 });
 </script>
 
-
-<script>
-document.getElementById('muda-cor').addEventListener('click', () => {
-    document.body.style.backgroundColor =
-      document.body.style.backgroundColor === 'black' ? 'white' : 'black';
-});
-</script>
-
-
-<div id="controls">
-     <div id="scroll-up" class="control-button">-</div>
-    <div id="scroll-down" class="control-button">+</div>
-    <div id="scroll-toggle" class="control-button">Play</div>
-    <div id="scroll-reset" class="control-button">Reset</div>
-    <div id="transpose-up" class="control-button">Transpose +</div>
-    <div id="transpose-down" class="control-button">Transpose -</div>
-    <div id="font-size-up" class="control-button">A+</div>
-    <div id="font-size-down" class="control-button">A-</div>
-    <div id="muda-cor" class="control-button">mudar fundo</div>
-  </div>
 </body>
 <script src="../hinos-da-harpa/hinos/pesquisar.js"></script>
 </html>

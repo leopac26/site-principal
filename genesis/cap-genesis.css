@@ -5,37 +5,7 @@
  }
  
  
- .titulo01{
-    text-align: center;
-    background-color: blue;
-    color: white;
-    font-size: 20pt;
-    font-family: Arial, Helvetica, sans-serif;
-    position: fixed;
-    width: 100%;
-    top: 0px;    
-    padding: 5px;    
- }
-
- #menu-principal{
-    text-align: center;
-    justify-content: center;
-    position: fixed;
-    width: 100%;
-    top: 36px;
-    background-color: rgb(32, 30, 187);
-    
- 
- }
-
- #menu-principal a{
-    color: white;
-    text-decoration: none;
-    
- }
-
- 
-   
+  
 
  .ordem-3{
     display: inline-flex;
@@ -45,9 +15,10 @@
     
  }
  .ordem-3 li{
+   padding: 5px;
     margin: 2px  20px 0px 20px;
-    border: 2px solid rgb(0, 132, 255);
-    background-color: rgb(0, 132, 255);
+    border: 1px solid rgb(250, 250, 250);
+    background-color: rgb(4, 5, 1);
     border-radius: 10%;
     font-size: 16pt;
    
@@ -92,8 +63,9 @@ tbody  td a{
     color: white;
     font-size: 16pt;
 }
+
 @media(max-width:680px){
-    .titulo01{font-size: 16pt;
+    .titulo-menu{font-size: 16pt;
       top: -6px;
       
     }
@@ -116,9 +88,6 @@ margin:0px}
         height: 20px;
     }
 
-    .ordem-3 li ul li a,.ordem-3 li ul li{
-      
-    }
     tbody tr td{
         height: 30px;
     }
@@ -129,25 +98,5 @@ margin:0px}
         width: 400px;
     }
     }
-
-
-/* capitulos*/
-
-#tit-biblia{
-   text-align: center;
-   width: 100%;
-   background-color: blue;
-   top: -15px;
-   position: fixed;
-   height: 30px;
-   color: white;
-   font-size: 26px;
-   padding-bottom: 20px;
-}
-
-tbody td a{
-text-decoration: none;
-}
-
 
 

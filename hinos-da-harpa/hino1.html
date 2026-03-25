@@ -1,47 +1,7 @@
-import os
-import re
 
-# Caminho da pasta
-pasta = r'D:\meus projetos de github\site-principal\hinos-da-harpa'
-
-# Novo bloco completo que deve existir apenas uma vez
-novo_bloco = '''<div id="controls">
-     <div id="scroll-up" class="control-button">-</div>
-    <div id="scroll-down" class="control-button">+</div>
-    <div id="scroll-toggle" class="control-button">Play</div>
-    <div id="scroll-reset" class="control-button">Reset</div>
-    <div id="transpose-up" class="control-button">Transpose +</div>
-    <div id="transpose-down" class="control-button">Transpose -</div>
-    <div id="font-size-up" class="control-button">A+</div>
-    <div id="font-size-down" class="control-button">A-</div>
-    <div id="muda-cor" class="control-button">mudar fundo</div>
-  </div>'''
-
-for nome_arquivo in os.listdir(pasta):
-    if nome_arquivo.endswith('.html'):
-        caminho_arquivo = os.path.join(pasta, nome_arquivo)
-
-        with open(caminho_arquivo, 'r', encoding='utf-8') as arquivo:
-            conteudo = arquivo.read()
-
-        # Remove todas as divs de botões duplicadas fora da #controls
-        conteudo = re.sub(
-            r'<div id="(scroll-down|scroll-toggle|scroll-reset|transpose-up|transpose-down|font-size-up|font-size-down)" class="control-button">.*?</div>\s*',
-            '',
-            conteudo
-        )
-
-        # Substitui o bloco de controles inteiro por um novo
-        conteudo = re.sub(
-            r'<div id="controls">.*?</div>',
-            novo_bloco,
-            conteudo,
-            flags=re.DOTALL
-        )
-
-        with open(caminho_arquivo, 'w', encoding='<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
-<head>
+<link rel="stylesheet" href="../genesis/genesis.css">
   <meta charset="UTF-8">
   <link rel="stylesheet" href="cifra.css">
   <link rel="stylesheet" href="../meusite.css">
@@ -164,7 +124,4 @@ Ele é tudo pra mim, e sem Ele não pos - so viver
 </body>
 <script src="cifra.js"></script>
 </html>
-utf-8') as arquivo:
-            arquivo.write(conteudo)
 
-        print(f'Corrigido: {nome_arquivo}')
