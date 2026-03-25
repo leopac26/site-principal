@@ -2,7 +2,8 @@
 <html lang="pt-BR">
 <link rel="stylesheet" href="../genesis/genesis.css">
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="cifra.css">
+  <link rel="stylesheet" href="../hinos-da-harpa/cifra.css">
+  <link rel="stylesheet" href="../meusite.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hino 01 Chuvas de Graça</title>
   <style>
@@ -10,6 +11,129 @@
     margin: 0px;
     padding: 0px;
 }
+
+
+
+.titulo{
+text-align: center;    
+background: blue;
+color: white;
+position: fixed;
+width: 100%;
+height: 38px;
+top: -12px;
+padding: 5px;
+font-size: 25pt;
+border: 1px solid rgb(3, 212, 20);
+z-index: 1;
+text-align: center;
+margin-bottom: 10px;
+font-size: 24px;
+
+}
+
+
+
+ul.ordem-principal{
+    position: fixed;
+    width: 100%;
+    background:blue;
+    justify-content: center;
+    top: 30px;
+    font-size: 16px;
+    height: 30px;
+list-style: none;
+justify-content: center;
+align-items: center;
+text-align: center;
+z-index: 1;
+
+}
+
+ul.ordem-principal li {
+background-color: #d5e7e9;
+display: inline-block;
+padding: 2px;
+text-decoration: none;
+transition-duration: 0.5s;
+border: 1px solid black;
+border-radius: 10%;}
+
+ul.ordem-principal li a {
+text-align: center;
+text-decoration: none;
+color: rgb(24, 9, 9);
+text-transform: uppercase;
+text-align: center;
+
+}
+
+ul.ordem-principal li ul {
+    visibility: hidden;
+    opacity: 0;
+    min-width: 5rem;
+    position: fixed;
+    transition: all 0.5s ease;
+    margin: 0;
+    display: none;
+    box-shadow: 0px 8px 16px 0px rgba(92, 1, 240, 0.315);
+
+}
+
+
+ul.ordem-principal li ul li {
+clear: both;
+width: 100%;
+padding: 0px ;
+margin-top: 3px;
+width: 100px;
+display: block;
+border: none;
+}
+
+ul.ordem-principal li:hover,
+ul.ordem-principal li:focus-within {
+background-color: rgb(252, 252, 252);
+cursor: pointer;
+font-weight: bold;
+transition: 0.3s;
+}
+
+/*controla a exibiçao do dropdown*/
+
+ul.ordem-principal li:hover>ul,
+ul.ordem-principal li:focus-within>ul,
+ul.ordem-principal li ul:hover,
+ul.ordem-principal li ul:focus {
+visibility: visible;
+opacity: 1;
+display: block;
+}
+
+#controls {
+position: fixed;
+width: 70px;
+height: 300px;
+vertical-align: middle;
+background:rgb(153, 153, 168);
+border: 0px solid black;
+}
+
+
+.botao{
+
+}
+
+button{
+padding:1px;
+margin: 15px 0px 0px 0px;
+font-size: 1rem;
+border: 1px solid black;
+border-radius: 10%;
+width: 70px;
+height: 40px;
+font-weight: bold;
+display: block;}
 
 
 .snippet-ytb-lazy {
@@ -41,6 +165,52 @@ background-color: inherit;
 }
 
 
+
+.row1{
+    margin: 800px auto;
+    border: 1px solid black;}
+    
+    
+    
+    
+.container{
+    overflow: scroll;
+    border: 2px solid black;
+}
+
+
+
+#resultado{
+
+margin: 100px 70px;
+overflow: scroll;
+    border: 2px solid black;
+}
+
+
+
+
+
+
+#resultado .hino{
+    font-size: 40px;
+    
+    
+            }
+
+
+ #resultado pre{
+    font-size: 20px;
+
+   
+ }
+
+
+
+#resultado pre b{
+    color: blue;
+    font-size: 20px;    
+}
 
 @media(max-width:680px){
     .titulo{ 
@@ -89,14 +259,6 @@ button{
 .snippet-ytb-lazy .player, .snippet-ytb-lazy iframe{
     display: none;
 }
-}
-#scroll-container {
-    width: 400px;
-    height: 500px;
-    overflow: hidden;
-    
-    position: relative;
-    margin-bottom: 20px;
 }
 
 #scroll-text {
@@ -164,34 +326,8 @@ button{
         text-align: center;
       }
   
-      #scroll-container {
-        margin: 10px 0px 0px 100px;
-        padding: 10px;
-        height: auto;
-        width: 91%;
-        overflow-y: auto;
-        white-space: pre-wrap;
-        font-size: 16px;
-      }
+     
   
-      pre {
-        margin: 50px 10px 10px 5px;
-      }
-  
-      .video-container {
-        position: fixed;
-        top: 70px;
-        right: 20px;
-        z-index: 1000;
-        width: 100%;
-        max-width: 560px;
-        height: 315px;
-      }
-  
-      .video-container iframe {
-        width: 100%;
-        height: 100%;
-      }
   
       @media (max-width: 680px) {
         .titulo {
@@ -264,14 +400,20 @@ button{
     <iframe width="560" height="315" src="https://www.youtube.com/embed/FryRjYAu0-s?si=M9roOyEVyA1_QsgY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   </div>
 
-  <h1 class="titulo">Shekinah Kadosh Hinos da Harpa Cristã</h1>
+  <h1 class="titulo-menu">Shekinah Kadosh Hinos da Harpa Cristã</h1>
   
-  <ul class="ordem-principal">
-    <li><a href="../hinos-da-harpa/index.html">Hino</a></li>
-    <li><a href="../genesis/index.html">Bíblia Sagrada</a></li>
-    <li><a href="../videos-youtube/videosyoutube.html">Vídeos</a></li>
-    <li><a href="meusite.html">Shekinah Kadoshi</a></li>
-  </ul>
+  <table class="menu-principal">
+<tr class="menu-tabela">
+<td><a href="../louvores/index.html">louvores</a></td>
+<td><a href="../genesis/index.html">biblia sagrada </a></td>
+<td><a href="../teclado virtual/teclado.html">Teclado Virtual </a></td>
+<td><a href="../hinos-da-harpa/index.html">hinos</a></td>
+<td><a href="../quiz-Biblico/quiz.html">quiz </a></td>
+<td><a href="">Playback </a></td>
+
+</tr>
+
+</table>
 
   <div id="controls">
     <div id="scroll-up" class="control-button">-</div>
