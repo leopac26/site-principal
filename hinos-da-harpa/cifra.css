@@ -352,7 +352,7 @@ body {
 
 .video-container {
         position: fixed;
-        top: 70px;
+        top: 100px;
         right: 20px;
         z-index: 1000;
         width: 100%;
@@ -369,15 +369,6 @@ body {
  
 }
 
-
-
-.video-container {
-  display: none;
-}
-
-.video-container iframe {
-  display: none;
-}
 
 #content {
   margin: 100px 0px 0px 100px;
