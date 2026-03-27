@@ -1,152 +1,188 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<link rel="stylesheet" href="genesis.css">
+<head>
+  <link rel="stylesheet" href="genesis/genesis.css">
+  <link rel="stylesheet" href="hinos-da-harpa/cifra.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>shekinah kadoshi</title>
+  <title>Shekinah Kadoshi</title>
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
-  background: linear-gradient(rgba(0, 0, 0, 0.007), rgba(0, 0, 0, 0.034)),
-    url("logomarca.jpeg") no-repeat center center;
-  background-size: 60% 50%; /* ← reduz o tamanho da imagem */
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  margin: 0;
-  padding: 0;
-}
-
-
-    h2, h3 {
-      text-align: center;
+      background: linear-gradient(rgba(0, 0, 0, 0.007), rgba(0, 0, 0, 0.034));
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
     }
 
-    h2 {
-      margin: 120px 0px 10px 0px;
-      border: 0px solid rgb(78, 79, 93);
-      background: rgba(0, 128, 0, 0.034);
-      width: 90%;
-      max-width: 400px;
-      box-shadow: 5px 5px 30px rgba(172, 255, 47, 0.116);
-      border-radius: 4%;
-      font-size: 30px;
-      color: rgb(0, 0, 0);
-      padding: 10px;
-    }
-
-    h3 {
-      font-size: 26px;
-      color: blue;
-      border: 0px solid rgb(78, 79, 93);
-      background: rgba(0, 128, 0, 0.178);
-      width: 90%;
-      max-width: 400px;
-      margin: 10px 0px;
-      padding: 10px;
-      color: rgb(3, 0, 0);
-    }
-
-    .titulo-menu {
-      margin-top: 0;
-      border: 1px solid blue;
-      background: blue;
-      color: rgb(250, 153, 9);
-      font-size: 48px;
-      text-align: center;
-      width: 100%;
-      position: fixed;
-      top: 0;
-      z-index: 999;
-      padding: 10px;
-    }
-
-    .menu-principal {
-      width: 100%;
-      position: fixed;
-      top: 70px;
-      border: 1px solid black;
-      background: blue;
-      color: white;
+    /* Container principal que vai conter logo e textos */
+    .main-container {
       display: flex;
-      justify-content: center;
       align-items: center;
-      font-size: 24px;
-      z-index: 998;
+      justify-content: center;
+      min-height: calc(100vh - 200px); /* Altura total menos o espaço do menu */
+      padding: 20px;
+      margin-top: 50px;
     }
 
-    .menu-tabela {
+    /* Container para os dois lados e centro */
+    .content-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       width: 100%;
-      background: rgb(46, 7, 241);
+      max-width: 1400px;
+      gap: 40px;
+      flex-wrap: wrap;
     }
 
-    .menu-tabela a {
-      color: white;
-      margin: 5px;
-      text-decoration: none;
-      padding: 8px;
+    /* Lado esquerdo */
+    .left-side {
+      flex: 1;
+      text-align: right;
+      padding: 20px;
+      min-width: 250px;
+    }
+
+    /* Centro - Logo */
+    .center-logo {
+      flex-shrink: 0;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .center-logo img {
+      max-width: 100%;
+      height: auto;
+      width: 400px;
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .center-logo img:hover {
+      transform: scale(1.02);
+    }
+
+    /* Lado direito */
+    .right-side {
+      flex: 1;
+      text-align: left;
+      padding: 20px;
+      min-width: 250px;
+    }
+
+    /* Estilos dos cards de informação */
+    .info-card {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 15px;
+      padding: 25px;
+      margin: 15px 0;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .info-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .info-card h2, .info-card h3 {
+      text-align: center;
+      margin: 0;
+      border: none;
+      background: transparent;
+      width: 100%;
+      box-shadow: none;
+      padding: 10px;
+    }
+
+    .info-card h2 {
+      font-size: 28px;
+      color: #2c3e50;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #3498db;
       display: inline-block;
+      width: auto;
     }
 
-     .titulo-menu{
-    border: 1px solid blue;
-    background: blue;
-  color: rgb(250, 153, 9);
-  margin: auto;
-  font-size: 35px;
-  text-align: center;
-  width: 100vw;
-  height: 45px;
-  justify-content: center;
-  position: fixed;
-  
-  }
+    .info-card h3 {
+      font-size: 20px;
+      color: #34495e;
+      line-height: 1.6;
+    }
 
-   .menu-tabela{
-    margin-top:20px;
-    background: rgb(46, 7, 241);
-    
-  }
-
-  td{
-    margin: 0px;
-    padding: 10px 0px;
-    width: 300px;
-    text-align: center;
-
-  }
-  
-  .menu-tabela a {
-    color:white;
-    text-decoration: none;
-  
-    
-  }
-  .menu-tabela a:hover{
-    color: red;
-    text-decoration: none;
-  }
-  
-
-    @media(max-width: 670px) {
-      .titulo-menu {
-        font-size: 25px;
-        padding: 10px 0;
+   
+    /* Responsividade */
+    @media (max-width: 1024px) {
+      .content-wrapper {
+        flex-direction: column;
+        gap: 20px;
       }
-
-      .menu-principal {
-        font-size: 14px;
-        top: 70px;
-        flex-wrap: wrap;
-      }
-
-      .menu-tabela a {
-        display: block;
-        margin: 5px auto;
+      
+      .left-side, .right-side {
         text-align: center;
+        width: 100%;
       }
+      
+      .center-logo img {
+        width: 300px;
+      }
+      
+      .info-card h2 {
+        font-size: 24px;
+      }
+      
+      .info-card h3 {
+        font-size: 18px;
+      }
+    }
 
-      h2, h3 {
+    @media (max-width: 768px) {
+      .menu-tabela {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+      
+      .menu-tabela td {
+        padding: 5px 10px;
+      }
+      
+      .center-logo img {
+        width: 250px;
+      }
+      
+      .info-card {
+        padding: 15px;
+      }
+      
+      .info-card h2 {
         font-size: 20px;
-        width: 95%;
+      }
+      
+      .info-card h3 {
+        font-size: 16px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .center-logo img {
+        width: 200px;
+      }
+      
+      .info-card h2 {
+        font-size: 18px;
+      }
+      
+      .info-card h3 {
+        font-size: 14px;
       }
     }
   </style>
@@ -156,7 +192,6 @@
 
   <table class="menu-principal">
     <tr class="menu-tabela">
-      
       <td><a href="louvores/index.html">Louvores</a></td>
       <td><a href="genesis/index.html">Bíblia Sagrada</a></td>
       <td><a href="corinhos/corinhos.html">Corinhos</a></td>
@@ -164,13 +199,41 @@
       <td><a href="hinos-da-harpa/index.html">Hinos</a></td>
       <td><a href="quiz-Biblico/quiz.html">Quiz</a></td>
       <td><a href="#">Playback</a></td>
-    </tr>
-  </table>
+     </tr>
+   </table>
 
-  <h2>Dias de cultos <br>Das 19:30 Hrs<br>Quarta-feira</h2>
-  <h3>Bairro São José<br> número 189</h3>
+  <div class="main-container">
+    <div class="content-wrapper">
+      <!-- Lado Esquerdo -->
+      <div class="left-side">
+        <div class="info-card">
+          <h2>🗓️ Dias de Cultos</h2>
+          <h3>Das 19:30 Hrs<br><br>
+          🟦 Quarta-feira<br><br>
+          🟦 Terça-feira<br>
+          🟦 Quinta-feira<br>
+          🟦 Domingo</h3>
+        </div>
+      </div>
 
-  <h2>Terça-feira <br>Quinta-feira<br> e <br> Domingo <br>Das 19:30 hrs</h2>
-  <h3>Antônio Cardoso, 245<br>Manoel Alves de Queiroz</h3>
+      <!-- Centro - Logo -->
+      <div class="center-logo">
+        <img src="logomarca.jpeg" alt="Logomarca Shekinah">
+      </div>
+
+      <!-- Lado Direito -->
+      <div class="right-side">
+        <div class="info-card">
+          <h2>📍 Endereços</h2>
+          <h3>
+            <strong>Bairro São José</strong><br>
+            Número 189<br><br>
+            <strong>Antônio Cardoso, 245</strong><br>
+            Manoel Alves de Queiroz
+          </h3>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

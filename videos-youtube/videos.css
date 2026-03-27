@@ -10,49 +10,6 @@ body {
   align-items: center;
 }
 
-.titulo-menu {
-  background: blue;
-  color: white;
-  font-size: 28px;
-  text-align: center;
-  padding: 20px;
-  margin: 0;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
-}
-
-.menu-principal {
-  margin-top: 70px;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  background: #007bff;
-  padding: 10px;
-  position: fixed;
-  width: 100%;
-  top: 70px;
-  z-index: 999;
-}
-
-.menu-principal td {
-  padding: 10px;
-}
-
-.menu-principal a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 5px 10px;
-}
-
-.menu-principal a:hover {
-  background-color: white;
-  color: #007bff;
-  border-radius: 5px;
-}
-
 /* Contêiner que engloba os vídeos - agora com 3 colunas lado a lado */
 .central {
   display: grid;
@@ -61,6 +18,7 @@ body {
   margin-top: 150px; /* Ajuste o topo conforme necessário */
   width: 90%; /* Garante que a largura não ocupe a tela toda */
   justify-items: center; /* Centraliza o conteúdo nas células */
+  max-width: 1200px;
 }
 
 /* Estilo para cada player de vídeo */
@@ -70,11 +28,15 @@ body {
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   text-align: center;
-  width: 100%; /* Certifica-se de que o player ocupa toda a célula */
-  max-width: 300px; /* Define o tamanho máximo para cada player */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 100%;
+  max-width: 300px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.player:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
 }
 
 /* Estilo da imagem dentro do player */
@@ -82,7 +44,7 @@ body {
   width: 100%;
   height: auto;
   border-radius: 10px;
-  max-width: 100%; /* Garante que a imagem se ajuste */
+  max-width: 100%;
 }
 
 /* Estilo para o título do vídeo */
@@ -97,7 +59,12 @@ body {
   width: 60px;
   height: 60px;
   margin-top: 10px;
-  fill: #0f88ee;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.player svg:hover {
+  transform: scale(1.1);
 }
 
 /* Responsividade para telas menores */
@@ -107,34 +74,13 @@ body {
   }
 }
 
-@media (max-width: 670px) {
-  .titulo-menu {
-    font-size: 20px;
-    padding: 10px;
-  }
-
-  .menu-principal {
-    flex-direction: column;
-    align-items: center;
-    padding: 5px;
-  }
-
-  .menu-principal a {
-    font-size: 14px;
-    padding: 5px;
-  }
-
+@media (max-width: 768px) {
   .central {
     grid-template-columns: 1fr; /* 1 vídeo por linha em dispositivos muito pequenos */
-    gap: 10px;
+    gap: 15px;
   }
-
-  .player {
-    width: 100%;
-    margin-bottom: 10px;
-  }
-
+  
   .player h2 {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
